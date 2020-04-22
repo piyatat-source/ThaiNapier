@@ -13,50 +13,90 @@
 <body>
 
   <header>
-     <!-- <img src="img/logo_napier.png" width="100%" alt="" srcset=""> -->
-       <header>
         <nav>
+        <div class="header"></div>
           <input type="checkbox" id="check">
           <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
+          </label>  
+          <label for="check2" class="checkbtn2">
+            <i class="fas fa-user-circle"></i>
           </label>
-               
-            <label class="logo">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </label>
+            <img src="img/logo_napier2.png" alt="logo" ></img>
             <ul>
-              <li><a href="#">ข้อมูลหญ้าเนเปียร์</a></li>
-              <li><a href="#" class="active">การเพาะปลูก</a></li>
+              <li><a href="#" class="active">ข้อมูลหญ้าเนเปียร์</a></li>
+              <li><a href="#">การเพาะปลูก</a></li>
               <li><a href="#">การทดลอง</a></li>
               <li><a href="#">คำนวณต้นทุน</a></li>
               <li><a href="#">ลงทะเบียนเกษตรกร</a></li>
+             
             </ul>
+            <div class="user-control">
+              <ul>
+                <li><a href="#"><i class="fas fa-edit"></i> ลงชื่อเข้าใช้</a></li>
+                <li><a href="#"><i class="fas fa-user-plus"></i> สมัครสมาชิก</a></li>
+              </ul>
+            </div>
         </nav>
-     
-
+        
   </header>
 
-  <!-- <section class="content">
-
-    <div class="container">
-      <div class="content-about-napier">
-        <h1>การเพาะปลูกหญ้าเนเปียร์ </h1>
-      </div>
 
 
-      <div class="content-planting-napier">
-          <h1>การเพาะปลูกหญ้าเนเปียร์ </h1>
-      </div>
+  <section class="content">
+    <div >
+        
+        <h1>Content</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+          
     </div>
-  </section> -->
+  </section>
 
-  <!--<footer>
+  <!--
+    <footer>
     <div class="container">
         <div class="credit">
           <h4>เว็บไซต์นี้จัดทำโดยนักศึกษาสาขาวิทยาการคอมพิวเตอร์และสารสนเทศ</h4>
         </div>
     </div>
-  </footer> -->
+  </footer>
+ -->
+
+
+ <footer class="site-footer">
+    <div class="credit">
+        เว็บไซต์นี้จัดทำโดยนักศึกษาสาขาวิทยาการคอมพิวเตอร์และสารสนเทศ
+    </div>
+</footer>
+
 
 </body>
 </html>
