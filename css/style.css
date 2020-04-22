@@ -16,20 +16,26 @@
     font-style: normal;
  }
  nav{
-    position: fixed; 
+     position: fixed;
      background: #0e5f25;
-     height: 80px;
+     height: 100px;
      width: 100%;
      border: orange;
      border-bottom: palegreen;
      border-bottom: 3px solid #56b616;
  }
+ 
 
 label.logo{
+    background: url(../img/logo_napier.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
     color: white;
     font-size: 35px;
-    line-height: 80px;
-    padding: 0 50px;
+    line-height: 100px;
+    /* padding: 0 50px; */
     font-weight: bold;
 }
 
@@ -39,7 +45,7 @@ label.logo{
 }
 nav ul li{
     display: inline-block;
-    line-height: 80px;
+    line-height: 100px;
     margin: 0 5px;
 
 }
@@ -65,7 +71,7 @@ a:hover{
     font-size: 30px;
     color: white;
     float: right;
-    line-height: 80px;
+    line-height: 100px;
     margin-right: 40px;
     cursor: pointer;
     display: none;
@@ -85,10 +91,12 @@ a:hover{
 }
 
 @media (max-width: 945px){
+   
     label.logo{
         color: white;
-        font-size: 20px;
-        line-height: 80px;
+    
+        font-size: 30px;
+        line-height: 70px;
         font-weight: bold;
     }
 
@@ -100,10 +108,13 @@ a:hover{
         width: 100%;
         height: 100vh;
         background: #133f20;
-        top: 80px;
+        top: 70px;
         left: -100%;
         text-align: center;
         transition: all .5s;
+    }
+    nav{
+        height: 70px;
     }
     nav ul li{
         display: block;
@@ -120,6 +131,11 @@ a:hover{
     }
     #check:checked ~ ul{
         left: 0;
+    }
+    .checkbtn{
+
+        line-height: 70px;
+
     }
 
 }

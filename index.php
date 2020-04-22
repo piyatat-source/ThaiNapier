@@ -13,19 +13,20 @@
 <body>
 
   <header>
-      <!-- <img src="img/logo_napier.png" width="100%" alt="" srcset=""> -->
+     <!-- <img src="img/logo_napier.png" width="100%" alt="" srcset=""> -->
        <header>
         <nav>
           <input type="checkbox" id="check">
           <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
           </label>
-          
-          
-           <label class="logo">THAINAPIER</label> 
+               
+            <label class="logo">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </label>
             <ul>
-              <li><a href="#" class="active">ข้อมูลหญ้าเนเปียร์</a></li>
-              <li><a href="#">การเพาะปลูก</a></li>
+              <li><a href="#">ข้อมูลหญ้าเนเปียร์</a></li>
+              <li><a href="#" class="active">การเพาะปลูก</a></li>
               <li><a href="#">การทดลอง</a></li>
               <li><a href="#">คำนวณต้นทุน</a></li>
               <li><a href="#">ลงทะเบียนเกษตรกร</a></li>
@@ -35,18 +36,19 @@
 
   </header>
 
-  <section class="content">
+  <!-- <section class="content">
 
     <div class="container">
       <div class="content-about-napier">
-          <h1>หญ้าเนเปียร์ (Napier Grass)</h1>
+        <h1>การเพาะปลูกหญ้าเนเปียร์ </h1>
       </div>
+
 
       <div class="content-planting-napier">
           <h1>การเพาะปลูกหญ้าเนเปียร์ </h1>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!--<footer>
     <div class="container">
