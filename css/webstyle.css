@@ -169,6 +169,7 @@ header {
 }
 
 .form-reg .content .content1row input[type="number"] {
+  -webkit-appearance: none;
   display: inline;
   font-size: 14px;
   padding: 3px 3px;
@@ -191,11 +192,20 @@ header {
 }
 
 .form-reg .content .map .search-box input {
+  -webkit-appearance: none;
   width: 70%;
 }
 .form-reg .content .map .search-box button {
-  width: 25%;
+  -webkit-appearance: none;
   display: inline;
+  width: 25%;
+  background-color: #4caf50;
+  border: 1px solid green;
+  color: white;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 7px;
 }
 
 .map-content {
@@ -222,11 +232,12 @@ header {
   width: 100%;
 }
 .form-reg .content .btn-submit input {
+  -webkit-appearance: none;
   width: 40%;
   background-color: #4caf50;
   border: 1px solid green;
   color: white;
-
+  height: 50px;
   font-size: 16px;
   cursor: pointer;
 }
@@ -240,8 +251,11 @@ header {
 }
 
 .form-reg .content input {
+  -webkit-appearance: none;
+  height: 40px;
   font-size: 14px;
-  padding: 3px 3px;
+  box-sizing: border-box;
+  padding-left: 10px;
   width: 90%;
   border-radius: 5px;
   border: 1px solid #e1e1e1;
@@ -688,7 +702,8 @@ footer div {
     width: 100%;
   }
   .form-reg .content .btn-submit input {
-    width: 80%;
+    -webkit-appearance: none;
+    width: 100%;
   }
   .table-container {
     display: none;

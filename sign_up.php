@@ -91,15 +91,20 @@ if($_POST){
    
   <div class="login-page">
      <form  action="sign_up.php" method="post">
+     
+     <div class="icon-back"><a href="index.php"><i class="fas fa-chevron-left"></i> กลับ</a></div>
          <div class="form">
-       
+         
             <div class="first" >
                 <h2> ลงทะเบียนสมาชิก </h2>
                 <input type="text"   name="txtUsername" placeholder="ชื่อผู้ใช้" required/>
                 <input type="password"  name="txtPassword" placeholder="รหัสผ่าน" required />
                 <input type="password"   name="txtrePassword" placeholder="ยืนยันรหัสผ่าน" required/>
       <!-- <a href="#">เข้าสู่ระบบ</a> -->
-                <button type="button" class="switch" >ถัดไป</button>
+                <div class="ct">
+                    <button type="button" class="switch reg" >ถัดไป</button>
+                </div>
+                
                 <p class="warning"><a>
                  <?php 
                 if($_POST&&$status==1){echo "มีผู้ใช้ชื่อบัญชีนี้แล้ว กรุณาใช้ชื่ออื่น";}

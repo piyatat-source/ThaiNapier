@@ -48,6 +48,7 @@ if($_POST){
 
    
   <div class="login-page">
+  <div class="icon-back"><a href="index.php"><i class="fas fa-chevron-left"></i> กลับ</a></div>
   <div class="form">
     <form class="login-form" action="sign_in.php" method="post">
         <h2> ลงชื่อเข้าใช้ </h2>

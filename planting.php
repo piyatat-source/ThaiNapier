@@ -8,7 +8,7 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="img/iconweb.ico" type="image/ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>THAINAPIER เว็บไทยเนเปียร์</title>
     
     <link rel="stylesheet" href="css/webstyle.css">

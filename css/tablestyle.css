@@ -68,7 +68,7 @@ th {
 }
 .card-detail {
   width: 100%;
-  height: 70%;
+  height: 75%;
 }
 .card-detail .detail-left {
   padding: 12px;
@@ -113,7 +113,7 @@ th {
 
 .card-manage {
   width: 100%;
-  height: 30%;
+  height: 25%;
 }
 
 .card-manage .button-cal {
