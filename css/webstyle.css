@@ -172,7 +172,6 @@ header {
   -webkit-appearance: none;
   display: inline;
   font-size: 14px;
-  padding: 3px 3px;
   width: 15%;
   border-radius: 5px;
   border: 1px solid #e1e1e1;
@@ -636,6 +635,7 @@ footer div {
     background: none;
     color: #f5a821;
   }
+
   #check:checked ~ ul.all-mainmenu {
     right: 0;
   }
