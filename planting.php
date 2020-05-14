@@ -7,6 +7,7 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="img/iconweb.ico" type="image/ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THAINAPIER เว็บไทยเนเปียร์</title>
     
@@ -21,63 +22,11 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
 
 </head>
 <body>
-<header>
-        <nav>
-       
-        <div class="header"></div>
-          <input type="checkbox" id="check">
-              <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-              </label>  
-
-              <input type="checkbox" id="check2">
-              <label for="check2" class="checkbtn2">
-                <i class="fas fa-user-circle"></i>
-              </label>  
-          
-
-      
-            <img src="img/logo_napier3.png" alt="logo" ></img>
-            <ul class="all-mainmenu">
-              <li><a href="index.php">ข้อมูลหญ้าเนเปียร์</a></li>
-              <li><a href="planting.php" class="active">การเพาะปลูก</a></li>
-              <li><a href="#">การทดลอง</a></li>
-              <li><a href="#" id="btn-reg">ลงทะเบียนเกษตรกร</a></li>
-             
-            </ul>
-            
-            <div id="user-control" class="user-control">
-              <ul class="user-menu">
-                <!-- ยังไม่ล็อกอิน --> 
-                <?php 
-                if($_SESSION['Id']==""){
-                ?>          
-                <li><a href="sign_in.php"><i class="fas fa-edit"></i> ลงชื่อเข้าใช้</a></li>
-                <li><a href="sign_up.php"><i class="fas fa-user-plus"></i> สมัครสมาชิก</a></li>
-                <?php
-                }
-                else{?>
-
-                <li><a href="#"><i class="fas fa-user"></i> ชื่อผู้ใช้ : <?php echo $_SESSION['Username']; ?></a></li>
-                <li><a href="#"> </a></li> 
-                <li><a href="#">จัดการข้อมูลส่วนตัว</a></li>
-                <li><a href="#" id="btn-signout">ออกจากระบบ</a></li>
-                <?php
-                }
-                ?>
-                
-       
-                <!-- ล็อกอินแล้ว -->
-               
-
-              </ul>
-            </div>
-        </nav>
-        
-  </header>
+<?php
+include("header.php"); 
+?>
 
   <section class="content"><br></section>
-
   <section class="content2">
     <div class="container">
     <div class="info-grass1" >

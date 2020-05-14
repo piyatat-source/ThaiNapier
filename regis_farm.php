@@ -40,7 +40,7 @@ if($_POST){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THAINAPIER เว็บไทยเนเปียร์</title>
-
+    <link rel="icon" href="img/iconweb.ico" type="image/ico">
     
     <link rel="stylesheet" href="css/webstyle.css">
 
@@ -51,72 +51,23 @@ if($_POST){
 
 </head>
 <body>
-<header>
-        <nav>
-       
-        <div class="header"></div>
-          <input type="checkbox" id="check">
-              <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-              </label>  
-
-              <input type="checkbox" id="check2">
-              <label for="check2" class="checkbtn2">
-                <i class="fas fa-user-circle"></i>
-              </label>  
-          
-
-      
-            <img src="img/logo_napier3.png" alt="logo" ></img>
-            <ul class="all-mainmenu">
-              <li><a href="index.php" >ข้อมูลหญ้าเนเปียร์</a></li>
-              <li><a href="planting.php">การเพาะปลูก</a></li>
-              <li><a href="#">การทดลอง</a></li>
-              <li><a href="#" id="btn-reg" class="active">ลงทะเบียนเกษตรกร</a></li>
-             
-            </ul>
-            
-            <div id="user-control" class="user-control">
-              <ul class="user-menu">
-                <!-- ยังไม่ล็อกอิน --> 
-                <?php 
-                if($_SESSION['Id']==""){
-                ?>          
-                <li><a href="sign_in.php"><i class="fas fa-edit"></i> ลงชื่อเข้าใช้</a></li>
-                <li><a href="sign_up.php"><i class="fas fa-user-plus"></i> สมัครสมาชิก</a></li>
-                <?php
-                }
-                else{?>
-
-                <li><a href="#"><i class="fas fa-user"></i> ชื่อผู้ใช้ : <?php echo $_SESSION['Username']; ?></a></li>
-                <li><a href="#"> </a></li> 
-                <li><a href="#">จัดการข้อมูลส่วนตัว</a></li>
-                <li><a href="#" id="btn-signout">ออกจากระบบ</a></li>
-                <?php
-                }
-                ?>
-                
-       
-                <!-- ล็อกอินแล้ว -->
-               
-
-              </ul>
-            </div>
-        </nav>
-        
-  </header>
+<?php
+include("header.php"); 
+?>
 
 
 <section class="content bg-gray"><br>
+    
+
+    
+        
+<?php if(!$_SESSION['Level']){ ?>
+    <div class="header-form">403 Forbidden </div>
+    <div class="warning-login"><p>สิทธิ์ไม่ถูกต้อง กรุณาเข้าสู่ระบบก่อนใช้งาน</p></div>
+<?php }else{ ?>
     <div class="header-form">ลงทะเบียนเกษตรกร </div>
-
     <form id="register" method="post" action="regis_farm.php">
-
     <div class="form-reg">
-        <?php if(!$_SESSION['Level']){ ?>
-        <div class="warning-login"><p>ต้องเข้าสู๋ระบบจึงจะลงทะเบียนได้</p></div>
-        <?php }else{ ?>
-
         <div class="content">
             <div class="title">กรอกข้อมูลทั่วไป</div>
 

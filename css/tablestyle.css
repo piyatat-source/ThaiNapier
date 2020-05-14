@@ -1,0 +1,146 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+  height: 60;
+  color: #5d5d5d;
+}
+
+tr {
+  border-bottom: 2px solid #fafafa;
+  padding: 0;
+}
+
+tr:hover {
+  background-color: #e2e2e2;
+}
+
+.button-cal {
+  display: inline-block;
+  width: 50%;
+  background: #4e9caf;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+
+.button-edit {
+  display: inline-block;
+  width: 25%;
+  background: #f0ad4e;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+.button-del {
+  display: inline-block;
+  width: 20%;
+  background: #d8524e;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+
+/* tr:nth-child(odd) {
+  background-color: #f2f2f2;
+} */
+
+th {
+  background: #fafafa;
+  border-bottom: 2px solid #fafafa;
+  color: #636363;
+  height: 60px;
+}
+.card {
+  width: 100%;
+  height: 160px;
+  background: #fff;
+  margin-bottom: 15px;
+}
+.card-detail {
+  width: 100%;
+  height: 70%;
+}
+.card-detail .detail-left {
+  padding: 12px;
+  float: left;
+  text-align: left;
+
+  height: 100%;
+  width: 60%;
+}
+.card-detail .detail-left .farm-name {
+  font-weight: 800;
+  font-size: 22px;
+  color: #4e9caf;
+}
+
+.card-detail .detail-left .reg-date-text {
+  font-size: 14px;
+  padding-top: 14px;
+  line-height: 18px;
+  color: #4c4c4c;
+}
+.card-detail .detail-left .reg-date-text p {
+  color: #a1a1a1;
+}
+
+.card-detail .detail-right {
+  padding: 15px;
+  float: right;
+  text-align: right;
+
+  height: 100%;
+  width: 40%;
+}
+.card-detail .detail-right .area-text {
+  color: #4c4c4c;
+}
+.card-detail .detail-right .area-value {
+  color: #6d93ac;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-manage {
+  width: 100%;
+  height: 30%;
+}
+
+.card-manage .button-cal {
+  display: inline-block;
+  width: 50%;
+  background: #4e9caf;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+
+.card-manage .button-edit {
+  display: inline-block;
+  width: 25%;
+  background: #f0ad4e;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+.card-manage .button-del {
+  display: inline-block;
+  width: 20%;
+  background: #d8524e;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}

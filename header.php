@@ -43,7 +43,7 @@ session_start();
 
                 <li><a href="#"><i class="fas fa-user"></i> ชื่อผู้ใช้ : <?php echo $_SESSION['Username']; ?></a></li>
                 <li><a href="#"> </a></li> 
-                <li><a href="#">จัดการข้อมูลส่วนตัว</a></li>
+                <li><a href="farmlist.php">รายการลงทะเบียน</a></li>
                 <li><a href="#" id="btn-signout">ออกจากระบบ</a></li>
                 <?php
                 }

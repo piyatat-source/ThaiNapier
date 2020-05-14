@@ -78,6 +78,7 @@ if($_POST){
     <title>THAINAPIER เว็บไทยเนเปียร์</title>
     <link rel="stylesheet" href="css/sign_up.css">
     <link rel="stylesheet" href="css/webstyle.css">
+    <link rel="icon" href="img/iconweb.ico" type="image/ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/bb7f694074.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

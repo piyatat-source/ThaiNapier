@@ -60,6 +60,45 @@ header {
   /* height: 600px; */
   background: #fff;
 }
+
+.table-container {
+  margin-top: 30px;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  min-height: 500px;
+  background: #fff;
+}
+
+.card-container {
+  display: none;
+  margin-top: 30px;
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  min-height: 500px;
+  /* background: red; */
+}
+
+.warning-login {
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+  width: 60%;
+  height: 600px;
+  padding-top: 0;
+}
+
+.table-container .content {
+  text-align: left;
+  margin-top: 30px;
+  width: 60%;
+  /* height: 600px; */
+  /* background: yellowgreen; */
+
+  padding-top: 0;
+}
+
 .form-reg .content {
   text-align: left;
   margin-top: 30px;
@@ -444,7 +483,7 @@ a.active {
 }
 
 a:hover {
-  color: #f5a821;
+  /* color: #f5a821; */
   transition: 0.5s;
 }
 
@@ -650,5 +689,14 @@ footer div {
   }
   .form-reg .content .btn-submit input {
     width: 80%;
+  }
+  .table-container {
+    display: none;
+  }
+  .card-container {
+    display: block;
+  }
+  .header-form {
+    font-size: 20px;
   }
 }
