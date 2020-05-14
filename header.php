@@ -6,6 +6,7 @@ session_start();
 
 <header>
         <nav>
+       
         <div class="header"></div>
           <input type="checkbox" id="check">
               <label for="check" class="checkbtn">
@@ -19,16 +20,16 @@ session_start();
           
 
       
-            <img src="img/logo_napier2.png" alt="logo" ></img>
+            <img src="img/logo_napier3.png" alt="logo" ></img>
             <ul class="all-mainmenu">
-              <li><a href="#" class="active">ข้อมูลหญ้าเนเปียร์</a></li>
-              <li><a href="#">การเพาะปลูก</a></li>
+              <li><a href="index.php" class="active">ข้อมูลหญ้าเนเปียร์</a></li>
+              <li><a href="planting.php">การเพาะปลูก</a></li>
               <li><a href="#">การทดลอง</a></li>
-              <li><a href="#">คำนวณต้นทุน</a></li>
-              <li><a href="#">ลงทะเบียนเกษตรกร</a></li>
+              <li><a href="#" id="btn-reg">ลงทะเบียนเกษตรกร</a></li>
              
             </ul>
-            <div class="user-control">
+            
+            <div id="user-control" class="user-control">
               <ul class="user-menu">
                 <!-- ยังไม่ล็อกอิน --> 
                 <?php 

@@ -13,14 +13,27 @@ header {
   font-family: ibm-plex-thai, sans-serif;
   font-weight: 700;
   font-style: normal;
+  z-index: 999;
+}
+
+.hidden {
+  /* display: none; */
+  opacity: 0;
+  transition: opacity 0.5s, height 0 1s;
+  /* transition: all 0.5s ease-in-out; */
+  height: 0;
+}
+
+.visuallyhidden {
+  opacity: 0;
 }
 
 .content {
   display: inline-block;
   width: 100%;
   padding-top: 140px;
-  margin-bottom: 40px;
-  /* padding-bottom: 10px; */
+  /* margin-bottom: 40px; */
+  padding-bottom: 40px;
   /* background: red; */
 }
 .content2 {
@@ -29,6 +42,197 @@ header {
   padding-bottom: 50px;
   /* background: maroon; */
 }
+
+.bg-gray {
+  background: #f3f3f3;
+}
+.header-form {
+  text-align: center;
+  color: #5f5f5f;
+  font-size: 26px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.form-reg {
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  /* height: 600px; */
+  background: #fff;
+}
+.form-reg .content {
+  text-align: left;
+  margin-top: 30px;
+  width: 60%;
+  /* height: 600px; */
+  /* background: yellowgreen; */
+
+  padding-top: 0;
+}
+
+.form-reg .warning-login {
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+  width: 60%;
+  height: 600px;
+  /* background: pink; */
+  padding-top: 0;
+}
+.form-reg .warning-login p {
+  padding-top: 60px;
+}
+.form-reg .content .title {
+  padding-bottom: 25px;
+}
+.form-reg .content .content2row {
+  float: left;
+  width: 100%;
+  /* padding-bottom: 15px; */
+  /* height: 50px; */
+  /* background: #e88f1b; */
+}
+.form-reg .content .content2row .content2row-1 {
+  float: left;
+  width: 50%;
+  padding-bottom: 15px;
+  /* height: 50px; */
+  /* background: blueviolet; */
+}
+.form-reg .content .content2row .content2row-2 {
+  float: left;
+  float: left;
+  width: 50%;
+  padding-bottom: 15px;
+  /* height: 50px; */
+  /* background: navy; */
+}
+.form-reg .content .content1row {
+  float: left;
+  width: 100%;
+  /* height: 50px; */
+  padding-bottom: 15px;
+  /* background: green; */
+}
+.form-reg .content .content1row .content1row-1 {
+  float: left;
+  width: 50%;
+  /* height: 50px; */
+  /* background: yellowgreen; */
+}
+
+.form-reg .content .content1row .content1row-ex {
+  text-align: center;
+  float: left;
+  width: 100%;
+  /* height: 50px; */
+  /* background: yellowgreen; */
+}
+
+.form-reg .content .content1row input[type="number"] {
+  display: inline;
+  font-size: 14px;
+  padding: 3px 3px;
+  width: 15%;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+}
+.form-reg .content .content1row p {
+  display: inline;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.form-reg .content .map {
+}
+
+.form-reg .content .map .search-box {
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.form-reg .content .map .search-box input {
+  width: 70%;
+}
+.form-reg .content .map .search-box button {
+  width: 25%;
+  display: inline;
+}
+
+.map-content {
+  width: 100%;
+  height: 400px;
+  background: royalblue;
+}
+
+.map .position-selected {
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.map .position-selected p {
+  color: #0e5f25;
+  font-weight: 700;
+  display: inline;
+}
+
+.form-reg .content .btn-submit {
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+.form-reg .content .btn-submit input {
+  width: 40%;
+  background-color: #4caf50;
+  border: 1px solid green;
+  color: white;
+
+  font-size: 16px;
+  cursor: pointer;
+}
+.form-reg .content .btn-submit input:hover {
+  background-color: #3e8e41;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.form-reg .content input {
+  font-size: 14px;
+  padding: 3px 3px;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+}
+
+.form-reg .content input::-webkit-input-placeholder {
+  padding-left: 5px;
+  color: #ccc;
+}
+.form-reg .content input:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 5px #9ecaed;
+}
+
+.form-reg .content .title {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+}
+.form-reg .content .title-input {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+.requiredmark {
+  display: inline;
+  color: #b4283c;
+}
+
 .container div {
   float: left;
 }
@@ -78,45 +282,38 @@ header {
   margin-bottom: 20px;
   /* background: yellow; */
 }
-.info-grass3 .header{
+.info-grass3 .header {
   text-align: center;
   font-weight: 900;
   font-size: 24px;
   color: #1b1b1b;
-margin-bottom: 50px;
+  margin-bottom: 50px;
 }
-.info-grass3 .box-left{
- 
+.info-grass3 .box-left {
   width: 70%;
   padding-bottom: 30px;
   margin: 0 auto;
   /* background: red; */
-
 }
 
-.info-grass3 .box-right{
- 
+.info-grass3 .box-right {
   width: 70%;
   padding-bottom: 30px;
   margin: 0 auto;
   /* background: red; */
-
 }
 
-
-.box-left .mini-img{
+.box-left .mini-img {
   text-align: center;
   float: left;
   width: 25%;
-  
+
   /* background: blue; */
 }
-.box-left .mini-img img{
- 
+.box-left .mini-img img {
   width: 80%;
-;
 }
-.box-left .infomation{
+.box-left .infomation {
   padding-left: 20px;
   float: left;
   width: 75%;
@@ -138,7 +335,6 @@ margin-bottom: 50px;
   color: #8a8a8a;
 }
 
-
 .container {
   max-width: 85%;
   margin: 0 auto;
@@ -149,23 +345,20 @@ margin-bottom: 50px;
   /* height: 300px; */
   padding-top: 40px;
   padding-bottom: 40px;
-  background: #e88f1b;
+  background: #91b84a;
 }
 
-
-
-.bar-hist .info-grass2{
+.bar-hist .info-grass2 {
   width: 85%;
   /* background: maroon; */
   margin: auto;
 
-
   padding: 10px;
 }
-.info-grass2 .title{
+.info-grass2 .title {
   font-weight: 900;
   font-size: 24px;
-  color: #762f13;
+  color: #27760d;
 }
 .info-grass2 .detail {
   margin-top: 15px;
@@ -173,12 +366,14 @@ margin-bottom: 50px;
 }
 
 .user-control {
+  transition: all 0.5s ease-in-out;
   position: absolute;
   padding: 0;
   margin: 0;
-  background: #dedede;
+  background: #cae496;
   height: 40px;
   width: 100%;
+  z-index: -999;
 }
 .user-control ul {
   float: right;
@@ -188,7 +383,7 @@ margin-bottom: 50px;
 }
 
 .user-control ul li a {
-  color: #282828;
+  color: #135907;
   font-size: 14px;
 }
 .user-control ul li a:hover {
@@ -200,12 +395,14 @@ margin-bottom: 50px;
 }
 
 nav {
+  transition: transform 0.3s;
   position: fixed;
-  background: #0e5f25;
+  background: #fff;
   height: 100px;
   width: 100%;
-  border: orange;
-  border-bottom: 4px solid #56b616;
+  border: #d5eabc;
+  border-bottom: 4px solid #d5eabc;
+  z-index: 999;
 }
 
 nav img {
@@ -237,12 +434,12 @@ nav ul li {
 nav ul li a {
   border-radius: 10px;
   padding: 7px 13px;
-  color: white;
+  color: #4a7920;
 }
 
 a.active {
-  background: #054b19;
-  color: #f5a821;
+  background: #8dd15a;
+  color: #14520d;
   transition: 0.5s;
 }
 
@@ -253,7 +450,7 @@ a:hover {
 
 .checkbtn {
   font-size: 30px;
-  color: white;
+  color: #7db847;
   float: right;
   line-height: 100px;
   margin-right: 15px;
@@ -263,7 +460,7 @@ a:hover {
 
 .checkbtn2 {
   font-size: 30px;
-  color: white;
+  color: #7db847;
   float: right;
   line-height: 100px;
   margin-right: 15px;
@@ -328,6 +525,7 @@ footer div {
     display: block;
   }
   .user-control {
+    transition: transform 0.3s;
     position: relative;
     background: #dedede;
     height: 0px;
@@ -345,7 +543,7 @@ footer div {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #133f20;
+    background: #1b6420;
     top: 70px;
     right: -100%;
     text-align: center;
@@ -356,7 +554,7 @@ footer div {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #133f20;
+    background: #1b6420;
     top: 70px;
     left: -100%;
     text-align: center;
@@ -376,6 +574,7 @@ footer div {
     line-height: 30px;
   }
   nav ul li a {
+    color: #fff;
     font-size: 20px;
   }
 
@@ -416,20 +615,40 @@ footer div {
   .img-grass img {
     margin-right: 0px;
   }
-  .box-left .mini-img{
+  .box-left .mini-img {
     text-align: center;
     width: 100%;
   }
-  .box-left .mini-img img{
-
+  .box-left .mini-img img {
     width: 50%;
   }
-  .box-left .infomation{
+  .box-left .infomation {
     width: 100%;
     padding-left: 0px;
   }
-  .info-grass3 .box-left{
+  .info-grass3 .box-left {
+    width: 90%;
+  }
+  .form-reg .content {
     width: 90%;
   }
 
+  .form-reg .content .content2row {
+    float: none;
+  }
+  .form-reg .content .content2row .content2row-1 {
+    float: none;
+    width: 100%;
+  }
+  .form-reg .content .content2row .content2row-2 {
+    float: none;
+    width: 100%;
+  }
+  .form-reg .content .content1row .content1row-1 {
+    float: left;
+    width: 100%;
+  }
+  .form-reg .content .btn-submit input {
+    width: 80%;
+  }
 }

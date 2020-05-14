@@ -36,6 +36,12 @@ if($_POST){
             VALUES ('',$login_pk,'$inputFirstname','$inputLastname','$inputTel','$inputAddress','$inputProvince','$inputPostcode')";
             $query_add_members = mysqli_query($link,$sql_add_members) or die ("Error in query: $sql_add_members " . mysqli_error());
 
+
+            if($query_add_login&&$query_add_members){
+                echo "<script type='text/javascript'>alert('สำเร็จ');window.location.replace('sign_in.php');</script>";
+            }else{
+                echo "<script type='text/javascript'>alert('เกิดข้อผิดพลาด กรุณาลองใหม่ภายหลัง');window.location.replace('sign_up.php');</script>";
+            }
         }
     }
 
@@ -223,6 +229,8 @@ if($_POST){
         </div>
 -->
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script type="text/javascript" src="js/sweet.js"></script>
 
 <script type="text/javascript">
 
