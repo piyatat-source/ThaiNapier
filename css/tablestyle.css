@@ -65,6 +65,7 @@ th {
   height: 160px;
   background: #fff;
   margin-bottom: 15px;
+  border-radius: 6px;
 }
 .card-detail {
   width: 100%;
@@ -143,4 +144,27 @@ th {
   text-align: center;
   border-radius: 5px;
   color: white;
+}
+.btn-alert-condelete {
+  font-size: 20px;
+  background: #d8524e;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 7px;
+  border: 0;
+}
+
+.btn-alert-cancle {
+  font-size: 20px;
+  background: #ccc;
+  color: #4c4c4c;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 7px;
+  border: 0;
 }
