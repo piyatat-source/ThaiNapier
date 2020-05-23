@@ -1,9 +1,28 @@
+function topFunction() {
+  //Click to Top
+  // document.body.scrollTop = 0;
+  // document.documentElement.scrollTop = 0;
+  $("html, body").animate({ scrollTop: "0" });
+}
+
 function hideusermenu(x) {
+  var mybuttonTop = document.getElementById("return-to-top");
   if (x.matches) {
     // If media query matches
     let bar = document.getElementById("user-control");
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
+      // go to top
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybuttonTop.style.display = "block";
+      } else {
+        mybuttonTop.style.display = "none";
+      }
+      // go to top
+
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         bar.classList.remove("hidden");
@@ -32,16 +51,39 @@ function hideusermenu(x) {
       prevScrollpos = currentScrollPos;
     };
   } else {
-    var prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("user-control").style.display = "block";
+      // go to top
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybuttonTop.style.display = "block";
       } else {
-        document.getElementById("user-control").style.display = "block";
+        mybuttonTop.style.display = "none";
       }
-      prevScrollpos = currentScrollPos;
     };
+    document.getElementById("user-control").style.display = "block";
+    document.getElementById("user-control").style.display = "block";
+    // var prevScrollpos = window.pageYOffset;
+    // window.onscroll = function () {
+    //   // go to top
+    //   if (
+    //     document.body.scrollTop > 20 ||
+    //     document.documentElement.scrollTop > 20
+    //   ) {
+    //     mybuttonTop.style.display = "block";
+    //   } else {
+    //     mybuttonTop.style.display = "none";
+    //   }
+    //   // go to top
+    //   var currentScrollPos = window.pageYOffset;
+    //   if (prevScrollpos > currentScrollPos) {
+    //     document.getElementById("user-control").style.display = "block";
+    //   } else {
+    //     document.getElementById("user-control").style.display = "block";
+    //   }
+    //   prevScrollpos = currentScrollPos;
+    // };
   }
 }
 
