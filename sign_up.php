@@ -13,6 +13,7 @@ if($_POST){
     $inputAddress = $_POST['txtAddress'];
     $inputProvince = $_POST['txtProvince'];
     $inputPostcode = $_POST['txtPostcode'];
+    $PK="";
 
     //CheckUsername
     $sql_check_user = "SELECT * FROM tb_login WHERE loginUsername= '".$inputUsername."'";
@@ -27,16 +28,22 @@ if($_POST){
         {
             $status=2;
         }else{
-            $sql_add_login = "INSERT INTO tb_login (loginId,loginUsername,loginPassword)
-            VALUES ('','".$inputUsername."',sha1($inputPassword)) ";
+            $sql_add_login = "INSERT INTO tb_login (loginUsername,loginPassword)
+            VALUES ('".$inputUsername."',sha1($inputPassword)) ";
             $query_add_login = mysqli_query($link,$sql_add_login) or die ("Error in query: $sql_add_login " . mysqli_error());
-        
+            
+            
+            
+            $sql_findPK = "SELECT loginId FROM tb_login WHERE loginUsername = '".$inputUsername."'";
+            $query_findPK = mysqli_query($link,$sql_findPK);
+            $result_findPK = mysqli_fetch_array($query_findPK);
+            $PK = $result_findPK["loginId"];
 
-            $sql_add_members = "INSERT INTO tb_members (memberId,loginId,memberFirstname,memberLastname,memberTel,memberAddress,memberProvince,memberPostCode)
-            VALUES ('',$login_pk,'$inputFirstname','$inputLastname','$inputTel','$inputAddress','$inputProvince','$inputPostcode')";
+
+            $sql_add_members = "INSERT INTO tb_members (loginId,memberFirstname,memberLastname,memberTel,memberAddress,memberProvince,memberPostCode)
+            VALUES ('$PK','$inputFirstname','$inputLastname','$inputTel','$inputAddress','$inputProvince','$inputPostcode')";
             $query_add_members = mysqli_query($link,$sql_add_members) or die ("Error in query: $sql_add_members " . mysqli_error());
-
-
+  
             if($query_add_login&&$query_add_members){
                 echo "<script type='text/javascript'>alert('สำเร็จ');window.location.replace('sign_in.php');</script>";
             }else{
@@ -45,27 +52,6 @@ if($_POST){
         }
     }
 
-    
-    // $username = mysqli_real_escape_string($link,$_POST['txtUsername']);
-    // $password = mysqli_real_escape_string($link,$_POST['txtPassword']);
-    // $encodePass = sha1($password);
-    // // echo $username."+".$password."+".$encodePass;
-    // $sql = "SELECT * FROM tb_login WHERE loginUsername = '".$username."' and loginPassword = '".$encodePass."'";
-    // $query = mysqli_query($link,$sql);
-    // $result = mysqli_fetch_array($query);
-    //   if(!$result)
-    //   {
-    //   $status=1;
-    //   }
-    //   else
-    //   {
-    //   $_SESSION['Id'] = $result["loginId"];
-    //   $_SESSION['Username'] = $result["loginUsername"];
-    //   $_SESSION['Level'] = $result["userStatus"];
-    //   header("location:index.php");
-      
-    //   }
-    //   mysqli_close($link);
 }
 
 ?>
@@ -111,7 +97,7 @@ if($_POST){
                 else if($_POST&&$status==2){echo "***รหัสผ่านไม่ตรงกัน***";}
                 ?></a></p>
                 <p class="message">มีบัญชีแล้ว <a href="sign_in.php">เข้าสู่ระบบ</a></p>
-                <p class="message2">©Copyright ThaiNapier</p>
+                
             </div>
 
             

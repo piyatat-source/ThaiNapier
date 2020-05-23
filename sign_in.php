@@ -64,7 +64,6 @@ if($_POST){
       ?></a></p>
       <p class="message">ยังไม่มีบัญชี? <a href="sign_up.php">ลงทะเบียน</a></p>
 
-      <p class="message2">©Copyright ThaiNapier</p>
     
     </form>
   </div>
