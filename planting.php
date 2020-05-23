@@ -10,12 +10,13 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
     <link rel="icon" href="img/iconweb.ico" type="image/ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>THAINAPIER เว็บไทยเนเปียร์</title>
-    
+
     <link rel="stylesheet" href="css/webstyle.css">
     <link rel="stylesheet" href="css/webstyle2.css">
-
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/bb7f694074.js"></script>
+    <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript">
         var sessionNum = '<?php echo $session_value;?>';
     </script>
@@ -25,7 +26,7 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
 <?php
 include("header.php"); 
 ?>
-
+<a href="javascript:" id="return-to-top" onclick="topFunction()" style="display: none;" ><i class="fas fa-chevron-up" ></i></a>
   <section class="content"><br></section>
   <section class="content2">
     <div class="container">
@@ -45,23 +46,26 @@ include("header.php");
     </div>
   </section>
 
+<section class="bar-hist">
 <section class="content2">
-    <div class="container">
+    <div class="container"><br>
       <div class="img-grass" > <img src="img/planting4.jpg" alt="" > </div>
       
       <div class="info-grass1" >
-      <div class="title">การให้น้ำ</div>
-      <div class="detail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      <div class="title2">การให้น้ำ</div>
+      <div class="detail2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           หญ้าเนเปียร์สายพันธุ์นี้ตอบสนองต่อการให้น้ำได้ดีมาก ถ้าสามารถวางระบบการให้น้ำในแปลงปลูกได้จะมีการเจริญเติบโต และให้ผลผลิตสูงต่อเนื่องตลอดทั้งปีการให้น้ำสามารถให้ได้หลายระบบ เช่น สปริงเกิ้ลน้ำเหวี่ยง มินิสปริงเกิ้ล ท่อน้ำหยดเทปน้ำพุ่ง หรือปล่อยไหลไปตามร่องหน้าดิน
           </div>
          
-          <div class="detail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="detail2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           การให้น้ำแบบระบบน้ำหยดหากสามารถใส่ปุ๋ยไปพร้อมกับน้ำได้เลย จะยิ่งช่วยประหยัดเวลา และทําให้การใส่ปุ๋ยได้ผลดีมากขึ้น พบว่าการให้น้ำแบบระบบสปริงเกิ้ลเหวี่ยง และ มินิสปริงเกิ้ล ทุกๆ 3-5 วัน หรือปล่อยน้ำไหลไปตามร่องหน้าดินทุกๆ 7-10 วัน ทําให้หญ้าสามารถให้ผลผลิตได้ตลอดทั้งปี
           </div>
       </div>
     </div>
   </section>
-
+  </section>
+  <br>
   <section class="content2">
     <div class="container">
     <div class="info-grass1" >

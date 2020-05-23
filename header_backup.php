@@ -8,21 +8,10 @@ session_start();
         <nav>
        
         <div class="header"></div>
-
-          <!-- <input type="checkbox" id="check">
+          <input type="checkbox" id="check">
               <label for="check" class="checkbtn">
                 <i class="fas fa-bars"></i>
-              </label>   -->
-              <input type="checkbox" id="openmenu" class="hamburger-checkbox">
-              <div class="hamburger-icon checkbtn">
-                <label for="openmenu" id="hamburger-label">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </label>    
-              </div>
-
+              </label>  
 
               <input type="checkbox" id="check2">
               <label for="check2" class="checkbtn2">
@@ -58,23 +47,18 @@ session_start();
                   <li><a href="#"><i class="fas fa-user"></i> ชื่อผู้ใช้ : <?php echo $_SESSION['Username']; ?></a></li>
                   <li><a href="#"> </a></li> 
                   <li><a href="member-manager.php">จัดการสมาชิก</a></li>
-                  <input type="hidden" id="btn-reg"> <!-- JS ERROR -->
+                  <li><a href="#" id="btn-signout">ออกจากระบบ</a></li>
                   <?php
                 }
-                else if($_SESSION['Level']=="member"){ ?>
+                else{?>
 
-                  <li><a href="#"><i class="fas fa-user"></i> ชื่อผู้ใช้ : <?php echo $_SESSION['Username']; ?></a></li>
-                  <li><a href="#"> </a></li> 
-                  <li><a href="farmlist.php">รายการลงทะเบียน</a></li>
-                  <?php
+                <li><a href="#"><i class="fas fa-user"></i> ชื่อผู้ใช้ : <?php echo $_SESSION['Username']; ?></a></li>
+                <li><a href="#"> </a></li> 
+                <li><a href="farmlist.php">รายการลงทะเบียน</a></li>
+                <li><a href="#" id="btn-signout">ออกจากระบบ</a></li>
+                <?php
                 }
                 ?>
-                <?php 
-                if($_SESSION['Level']!=""){
-                ?>   
-                <li><a href="#" id="btn-signout" onclick="signout()">ออกจากระบบ</a></li>
-                <?php } ?>
-                
                 
        
                 <!-- ล็อกอินแล้ว -->

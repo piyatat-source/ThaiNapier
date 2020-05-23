@@ -10,19 +10,19 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>THAINAPIER เว็บไทยเนเปียร์</title>
     <link rel="icon" href="img/iconweb.ico" type="image/ico">
+     
     <link rel="stylesheet" href="css/webstyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/bb7f694074.js"></script>
-    <script type="text/javascript">
-        var sessionNum = '<?php echo $session_value;?>';
-    </script>
+    <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">var sessionNum = '<?php echo $session_value;?>';</script>
 
 </head>
 <body>
 <?php
 include("header.php"); 
 ?>
-
+<a href="javascript:" id="return-to-top" onclick="topFunction()" style="display: none;"><i class="fas fa-chevron-up"></i></a>
 
   
   <section class="content"><br>
@@ -68,7 +68,7 @@ include("header.php");
 
           
           <div class="box-left">
-            <div class="mini-img"><img src="img/leaf.png" alt=""></div>
+            <div class="mini-img"><img src="img/e1.jpg" alt=""></div>
             <div class="infomation">
               <div class="title">ใบ</div>
               <div class="detail">ใบหญ้าเนเปียร์ออกเป็นใบเดี่ยว ประกอบด้วยกาบใบที่ห่อหุ้มลำต้น และมีขนเล็กๆ นุ่มมือปกคลุม 
@@ -81,7 +81,7 @@ include("header.php");
 
           
           <div class="box-left">
-            <div class="mini-img"><img src="img/s.png" alt=""></div>
+            <div class="mini-img"><img src="img/e2.jpg" alt=""></div>
             <div class="infomation">
               <div class="title">ลำต้น</div>
               <div class="detail">หญ้าเนเปียร์ เป็นหญ้าที่มีลำต้นขนาดใหญ่ ลำต้นแตกเป็นกอหรือแตกต้นใหม่ได้ ลำต้นมีลักษณะแข็งแรงมีลำต้นสั้นๆ
@@ -94,7 +94,7 @@ include("header.php");
 
 
           <div class="box-left">
-            <div class="mini-img"><img src="img/d.png" alt=""></div>
+            <div class="mini-img"><img src="img/e3.jpg" alt=""></div>
             <div class="infomation">
               <div class="title">ดอก</div>
               <div class="detail">ดอกหญ้าเนเปียร์ออกเป็นช่อ แบบ spike ช่อดอกมีรูปทรงกระบอก สีเหลือง ยาวประมาณ 15-22 เซนติเมตร 
@@ -105,7 +105,7 @@ include("header.php");
           </div>
 
           <div class="box-left">
-            <div class="mini-img"><img src="img/seed.png" alt=""></div>
+            <div class="mini-img"><img src="img/e4.jpg" alt=""></div>
             <div class="infomation">
               <div class="title">ผลและเมล็ด</div>
               <div class="detail">หญ้าเนเปียร์พบติดผลได้น้อยมาก เปลือกผล และเมล็ดมีลักษณะหุ้มติดกันหุ้มติดกัน
