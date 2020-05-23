@@ -582,4 +582,11 @@ div.container-sticky {
   .compair .compair-end {
     width: 90%;
   }
+  .img-show {
+    width: 100%;
+  }
+
+  .img-show img {
+    margin-left: 0;
+  }
 }
