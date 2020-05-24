@@ -1,0 +1,220 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+  height: 60;
+  color: #5d5d5d;
+}
+
+tr {
+  border-bottom: 2px solid #eaeaea;
+  padding: 0;
+}
+
+tr:hover {
+  background-color: #e2e2e2;
+}
+.button-del {
+  display: inline-block;
+  width: 20%;
+  background: #d8524e;
+  padding: 5px;
+  margin-right: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+.button-view {
+  display: inline-block;
+  width: 30%;
+  background: #f0ad4e;
+  padding: 5px;
+  margin-right: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+
+/* tr:nth-child(odd) {
+  background-color: #f2f2f2;
+} */
+
+th {
+  background: #478121;
+  border-bottom: 2px solid #cae496;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 1px #000000;
+  height: 60px;
+}
+.card {
+  width: 100%;
+  height: 140px;
+  background: #fff;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.card-detail {
+  width: 100%;
+  height: 65%;
+}
+.card-detail .detail-left {
+  padding: 12px;
+  float: left;
+  text-align: left;
+  height: 100%;
+  width: 50%;
+}
+.card-detail .detail-left .member-name {
+  font-weight: 800;
+  font-size: 22px;
+  color: #4e9caf;
+}
+
+.card-detail .detail-left .reg-date-text {
+  font-size: 14px;
+  padding-top: 14px;
+  line-height: 18px;
+  color: #4c4c4c;
+}
+.card-detail .detail-left .reg-date-text p {
+  color: #a1a1a1;
+}
+.card-detail .detail-left .Num-Farm {
+  font-size: 14px;
+  padding-top: 14px;
+  line-height: 18px;
+  color: #4c4c4c;
+}
+.card-detail .detail-left .Num-Farm p {
+  color: #a1a1a1;
+}
+
+.card-detail .detail-right {
+  padding: 15px;
+  float: right;
+  text-align: right;
+  height: 100%;
+  width: 50%;
+}
+.card-detail .detail-right .area-text {
+  color: #4c4c4c;
+  padding-bottom: 7px;
+}
+.card-detail .detail-right .area-value {
+  color: #6d93ac;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-manage {
+  width: 100%;
+  height: 35%;
+}
+.card-manage .manage-left {
+  padding: 5px;
+  float: left;
+  text-align: left;
+  height: 100%;
+  width: 20%;
+}
+.card-manage .manage-right {
+  padding: 5px;
+  float: right;
+  text-align: right;
+  height: 100%;
+  width: 80%;
+}
+
+
+.card-manage .button-view {
+  display: inline-block;
+  width: 40%;
+  background: #f0ad4e;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+}
+.card-manage .button-del {
+  display: inline-block;
+  width: 30%;
+  background: #d8524e;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+}
+
+.header-table {
+  text-align: center;
+  color: #5f5f5f;
+  font-size: 26px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.search-input input {
+  font-family: FontAwesome;
+  -webkit-appearance: none;
+  height: 40px;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  width: 30%;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+  float: right;
+}
+
+.search-group {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.search-input {
+  margin: 0 auto;
+  width: 80%;
+
+}
+
+@media (max-width: 968px) {
+.header-table {
+  text-align: center;
+  color: #5f5f5f;
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 80%;
+  margin: 0 auto;
+  }
+
+  .search-input input {
+    /* -webkit-appearance: none;
+    height: 40px;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding-left: 10px; */
+    width: 100%;
+    /* border-radius: 5px;
+    border: 1px solid #e1e1e1;
+    float: right; */
+}
+.search-input {
+  margin: 0 auto;
+  width: 90%;
+}
+
+}
+

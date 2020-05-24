@@ -57,7 +57,7 @@ session_start();
 
                   <li><a href="#"><i class="fas fa-user"></i> ชื่อผู้ใช้ : <?php echo $_SESSION['Username']; ?></a></li>
                   <li><a href="#"> </a></li> 
-                  <li><a href="member-manager.php">จัดการสมาชิก</a></li>
+                  <li><a href="manage_members.php">จัดการสมาชิก</a></li>
                   <input type="hidden" id="btn-reg"> <!-- JS ERROR -->
                   <?php
                 }
