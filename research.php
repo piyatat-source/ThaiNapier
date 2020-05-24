@@ -12,6 +12,7 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
     
     <link rel="stylesheet" href="css/webstyle.css">
     <link rel="stylesheet" href="css/webstyle2.css">
+    <link rel="icon" href="img/iconweb.ico" type="image/ico">
     <!-- <link rel="stylesheet" href="css/webstyle3.css"> -->
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">

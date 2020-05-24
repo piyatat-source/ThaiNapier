@@ -35,6 +35,7 @@ if($_POST){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THAINAPIER เว็บไทยเนเปียร์</title>
+    <link rel="icon" href="img/iconweb.ico" type="image/ico">
     <link rel="stylesheet" href="css/sign_in.css">
     <link rel="stylesheet" href="css/webstyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">

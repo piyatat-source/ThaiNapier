@@ -17,6 +17,7 @@ $result = mysqli_fetch_array($query);
 
 <html>
 <head>
+<link rel="icon" href="img/iconweb.ico" type="image/ico">
 <link rel="stylesheet" href="https://use.typekit.net/ydq7ilf.css">
     <style>
         * {
