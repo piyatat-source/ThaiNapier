@@ -17,7 +17,7 @@ $(document).ready(function () {
       });
     } else {
       $("#result").html(
-        '<tr><td colspan="5">กรอกชื่อหรือชื่อผู้ใช้เพื่อนค้นหา</td></tr>'
+        '<tr><td colspan="5">กรอกชื่อหรือชื่อผู้ใช้เพื่อค้นหา</td></tr>'
       );
     }
   });
@@ -42,7 +42,7 @@ $(document).ready(function () {
       });
     } else {
       $("#result2").html(
-        '<div class="card-container"> กรอกชื่อหรือชื่อผู้ใช้เพื่อนค้นหา </div>'
+        '<div class="card-container"> กรอกชื่อหรือชื่อผู้ใช้เพื่อค้นหา </div>'
       );
     }
   });

@@ -28,13 +28,20 @@ include("header.php");
         <?php }else{ ?>
    <div class="header-form">จัดการข้อมูลสมาชิก </div> 
    <div class="search-group">
-          <div class="search-input">
-          <div class="search-margin">
-          <!-- <i class="fas fa-search icon-search"></i> -->
-            <input type="text" class="search-text" name="search_text" id="search_text" placeholder="&#xf002&nbsp;&nbsp; ค้นหาชื่อผู้ใช้" >
+   <div class="search-input">
+      <!-- <input type="text" class="search-text" name="search_text" id="search_text" placeholder=" ค้นหาชื่อผู้ใช้" > -->
+      <div class="input-icons"> 
+                <i class="fa fa-search icon"> 
+              </i> 
+                <input class="input-field" 
+                       type="text"
+                       name="search_text" 
+                       id="search_text"
+                       placeholder="ค้นหาชื่อผู้ใช้"> 
             </div>
-          </div>
-   </div><br>
+   </div>      
+   </div>
+  
    <?php 
               include("database/connect.php");
               $countera = 1;
