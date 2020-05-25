@@ -14,6 +14,7 @@ if(mysqli_num_rows($result) > 0) {
             <tr>
                 <td>'.$counterb.'</td>
                 <td>'.$row["loginUsername"].'</td>
+                <td>'.$row["memberFirstname"]."   ".$row["memberLastname"].'</td>
                 <td>
         ';
 
@@ -27,7 +28,7 @@ if(mysqli_num_rows($result) > 0) {
                 </td>
                 <td>'.$row['date'].'</td>
                 <td>
-                    <a href="mem_profile.php?fid='.$row['loginId'].'" class="button-view"><i class="fas fa-search"></i> ดูโปรไฟล์</a>
+                    <a href="mem_profile.php?lid='.$row['loginId'].'" class="button-view"><i class="fas fa-search"></i> ดูโปรไฟล์</a>
                     <a class="button-del" href="mem_del.php?lid='.$row['loginId'].'"><i class="far fa-trash-alt"></i> ลบ</a>
                 </td>
             </tr>

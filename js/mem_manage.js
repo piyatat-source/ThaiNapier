@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $("#result").html(
-    '<tr><td colspan="5">กรอกชื่อหรือชื่อผู้ใช้เพื่อนค้นหา</td></tr>'
+    '<tr><td colspan="6">กรอกชื่อหรือชื่อผู้ใช้เพื่อนค้นหา</td></tr>'
   );
   $("#search_text").keyup(function () {
     var txt = $(this).val();
@@ -17,7 +17,7 @@ $(document).ready(function () {
       });
     } else {
       $("#result").html(
-        '<tr><td colspan="5">กรอกชื่อหรือชื่อผู้ใช้เพื่อค้นหา</td></tr>'
+        '<tr><td colspan="6">กรอกชื่อหรือชื่อผู้ใช้เพื่อค้นหา</td></tr>'
       );
     }
   });

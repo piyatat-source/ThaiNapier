@@ -41,7 +41,7 @@ if(mysqli_num_rows($result2) > 0) {
 <div class="card-manage">
        <div class="manage-left"><div></div></div>
        <div class="manage-right">
-       <a href="mem_profile.php?fid='.$row['loginId'].'" class="button-view"><i class="fas fa-search"></i> ดูโปรไฟล์</a>
+       <a href="mem_profile.php?lid='.$row['loginId'].'" class="button-view"><i class="fas fa-search"></i> ดูโปรไฟล์</a>
        <a class="button-del" href="mem_del.php?lid='.$row['loginId'].'"><i class="far fa-trash-alt"></i> ลบ</a>
             </div>
        </div>

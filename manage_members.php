@@ -61,10 +61,11 @@ include("header.php");
           <thead>
             <tr>
               <th width="5%">ลำดับ</th>
-              <th width="20%">ชื่อผู้ใช้</th>
-              <th width="15%">จำนวนไร่ที่ลงทะเบียน</th>
-              <th width="20%">วันที่ลงทะเบียน</th>
-              <th width="40%">จัดการข้อมูล</th>
+              <th width="15%">ชื่อผู้ใช้</th>
+              <th width="25%">ชื่อ-นามสกุล</th>
+              <th width="10%">จำนวนไร่ที่ลงทะเบียน</th>
+              <th width="15%">วันที่ลงทะเบียน</th>
+              <th width="30%">จัดการข้อมูล</th>
             </tr>
           </thead>
           <tbody id="result">

@@ -255,7 +255,7 @@ $result = mysqli_fetch_array($query);
         Swal.fire({
         title: 'กำลังคำนวณ',
         html: 'รอสักครู่',
-        timer: 3000,
+        timer: 5000,
         timerProgressBar: false,
             onBeforeOpen: () => {
                 Swal.showLoading()

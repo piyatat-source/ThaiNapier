@@ -12,7 +12,7 @@ if($_POST){
     $query_check_user = mysqli_query($link, $sql_check_user);
     $result_check_user = mysqli_fetch_array($query_check_user,MYSQLI_ASSOC);
 
-	echo $inputUsername."/".$inputPassword."/".$encode."/".$setStatus;
+	
     if($result_check_user)
 	{
         $status=1;
