@@ -78,7 +78,7 @@ include("header.php");
           </div>
        </div>
        <div class="card-manage">
-          <a href="calculating.php?r=<?php echo $area[0];?>&n=<?php echo $area[1];?>&s=<?php echo $area[2];?>&id=<?php echo $result['farmId'];?>" class="button-cal"><i class="fas fa-calculator"></i> คำนวณต้นทุน</a>
+          <a href="calculating.php?r=<?php echo $area[0];?>&n=<?php echo $area[1];?>&s=<?php echo $area[2];?>&id=<?php echo $result['farmId'];?>" target="_blank"  class="button-cal"><i class="fas fa-calculator"></i> คำนวณต้นทุน</a>
           <a href="farm_edit.php?fid=<?php echo $result['registerId'];?>" class="button-edit"><i class="fas fa-pen"></i> แก้ไข</a>
           <a onclick="confirmation(event)" value="<?php echo $result['farmName'];?>" class="button-del" href="farm_del.php?fid=<?php echo $result['registerId'];?>"><i class="far fa-trash-alt"></i> ลบ</a>
        </div>
@@ -123,7 +123,7 @@ include("header.php");
                     ?>
               </td>
               <td>
-                  <a href="calculating.php?r=<?php echo $area[0];?>&n=<?php echo $area[1];?>&s=<?php echo $area[2];?>&id=<?php echo $result['registerId'];?>" class="button-cal"><i class="fas fa-calculator"></i> คำนวณต้นทุน</a>
+                  <a href="calculating.php?r=<?php echo $area[0];?>&n=<?php echo $area[1];?>&s=<?php echo $area[2];?>&id=<?php echo $result['registerId'];?>" target="_blank" class="button-cal"><i class="fas fa-calculator"></i> คำนวณต้นทุน</a>
                   <a href="farm_edit.php?fid=<?php echo $result['registerId'];?>" class="button-edit"><i class="fas fa-pen"></i> แก้ไข</a>
                   <!-- <a href="" id="btn-del" class="button-del"><i class="fas fa-trash"></i> ลบ</a>  -->
                   <a onclick="confirmation(event)" value="<?php echo $result['farmName'];?>" class="button-del" href="farm_del.php?fid=<?php echo $result['registerId'];?>"><i class="far fa-trash-alt"></i> ลบ</a>

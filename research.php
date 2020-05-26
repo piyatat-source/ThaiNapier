@@ -192,13 +192,16 @@ include("header.php");
         <div class="title-no">สรุปค่าใช้จ่ายทั้งสิ้น</div>
 
         <div class="pair">
-          <div class="pair-type1">24,200 <div class="sub-txt">บาท/ปี</div></div>
+          <div class="pair-type1">34,200 <div class="sub-txt">บาท/ปี</div></div>
           <div class="pair-type2">10,000 <div class="sub-txt">บาท/ปี</div></div>
         </div>
       </div>
-
+    
+    <div class="note-under">
+      หมายเหตุ : ค่าน้ำประปาคิดในอัตรา ลูกบาศก์เมตรละ 2บาท
     </div>
- 
+    </div>
+  
 
   
   <br>

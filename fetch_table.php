@@ -37,7 +37,7 @@ if(mysqli_num_rows($result) > 0) {
      echo $output;
 } 
 else {
-    echo '<tr><td colspan="5">ไม่พบ "'.$searchword.'"</td></tr>';
+    echo '<tr><td colspan="6">ไม่พบ "'.$searchword.'"</td></tr>';
 }
 
 ?>

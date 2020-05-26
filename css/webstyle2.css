@@ -191,6 +191,12 @@
   margin: 0 auto;
   color: #494949;
 }
+.note-under {
+  padding-top: 20px;
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
 .info-research .sum .green {
   color: #308721;
 }

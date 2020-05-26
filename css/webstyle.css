@@ -69,6 +69,9 @@ header {
 .bg-gray {
   background: #f3f3f3;
 }
+.bg-gray2 {
+  background: #fafafa;
+}
 .header-form {
   text-align: center;
   color: #5f5f5f;
@@ -181,6 +184,86 @@ header {
   width: 50%;
   /* height: 50px; */
   /* background: yellowgreen; */
+}
+
+.form-reg .content .content1row .content1row-1 .content1row-e {
+  /* width: 50%; */
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.form-reg
+  .content
+  .content1row
+  .content1row-1
+  .content1row-e:hover
+  input
+  ~ .checkmark {
+  background-color: #ccc;
+}
+.pdz {
+  padding-bottom: 15px;
+}
+.form-reg
+  .content
+  .content1row
+  .content1row-1
+  .content1row-e
+  input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.form-reg
+  .content
+  .content1row
+  .content1row-1
+  .content1row-e
+  input:checked
+  ~ .checkmark:after {
+  display: block;
+}
+
+.form-reg .content .content1row .content1row-1 .content1row-e .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: white;
+}
+
+.form-reg
+  .content
+  .content1row
+  .content1row-1
+  .content1row-e
+  input:checked
+  ~ .checkmark {
+  background-color: #3bbd8b;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 .form-reg .content .content1row .content1row-ex {
@@ -312,7 +395,18 @@ header {
   height: 100%;
 }
 
-.form-reg .content input {
+.form-reg .content input[type="text"] {
+  -webkit-appearance: none;
+  height: 40px;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+}
+
+.form-reg .content input[type="number"] {
   -webkit-appearance: none;
   height: 40px;
   font-size: 14px;
@@ -346,12 +440,12 @@ header {
 }
 .form-reg .content input:focus {
   outline: none;
-  border-color: #9ecaed;
+  border-color: #fcfcfc;
   box-shadow: 0 0 5px #9ecaed;
 }
 
 .form-reg .content .title {
-  color: #000;
+  color: #289449;
   font-size: 18px;
   font-weight: 700;
 }
@@ -816,5 +910,8 @@ footer div {
   }
   .header-form {
     font-size: 20px;
+  }
+  .form-reg {
+    width: 90%;
   }
 }

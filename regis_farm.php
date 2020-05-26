@@ -4,6 +4,7 @@ session_start();
 if($_POST){
     require_once("database/connect.php");
     $farmName = $_POST["farmName"];
+    $farmType = $_POST["farmType"];
     $Rai = $_POST["Rai"]; 
     $Ngan = $_POST["Ngan"];
     $squareMeter = $_POST["squareMeter"];
@@ -11,7 +12,10 @@ if($_POST){
     $farmArea = $Rai."-".$Ngan."-".$squareMeter;
     // $allArea = number_format($Area, 2, '.', '');
 
+    
+
     $houseNo = $_POST["houseNo"];
+    
     $villageNo = $_POST["villageNo"]; 
     $village = $_POST["village"]; 
     $alley = $_POST["alley"];
@@ -28,8 +32,10 @@ if($_POST){
     $lat = $_POST["input-lat"];
     $lng = $_POST["input-lng"];
 
-    $sql = "INSERT INTO tb_registers (loginId,farmName,farmArea,farmHouseNo,farmVillageNo,farmVillage,farmAlley,farmRoad,farmPostNo,farmSubDistric,farmDistrict,farmProvince,lat,lng)
-    VALUES('".$loginId."','".$farmName."','".$farmArea."','".$houseNo."','".$villageNo."','".$village."','".$alley."','".$road."','".$postNo."','".$Subdistrict."','".$district."','".$province."','".$lat."','".$lng."')";
+    
+
+    $sql = "INSERT INTO tb_registers (loginId,farmName,farmType,farmArea,farmHouseNo,farmVillageNo,farmVillage,farmAlley,farmRoad,farmPostNo,farmSubDistric,farmDistrict,farmProvince,lat,lng)
+    VALUES('".$loginId."','".$farmName."','".$farmType."','".$farmArea."','".$houseNo."','".$villageNo."','".$village."','".$alley."','".$road."','".$postNo."','".$Subdistrict."','".$district."','".$province."','".$lat."','".$lng."')";
     $query = mysqli_query($link,$sql);
     mysqli_close($link);
     header("location:farmlist.php");
@@ -56,7 +62,7 @@ if($_POST){
 <?php
 include("header.php"); 
 ?>
-<a href="javascript:" id="return-to-top" onclick="topFunction()" style="display: none;"><i class="fas fa-chevron-up"></i></a>
+<a href="javascript:" id="return-to-top" onclick="topFunction()" style="display: none;z-index: 4;"><i class="fas fa-chevron-up"></i></a>
 
 <section class="content bg-gray"><br>
     
@@ -77,6 +83,21 @@ include("header.php");
                 <div class="content1row-1">
                     <div class="title-input">ชื่อไร่ <div class="requiredmark">*</div></div>
                     <input type="text" id="farmName"  name="farmName" placeholder="ชื่อไร่เกษตร" required> 
+                </div>
+            </div>
+
+            <div class="content1row">
+                <div class="content1row-1">
+                    <div class="title-input pdz">ประเภท <div class="requiredmark">*</div></div>
+
+                    <label class="content1row-e"> เกษตรกรรายย่อย
+                        <input type="radio" checked name="farmType" value="small">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="content1row-e"> เกษตรกรรายใหญ่
+                        <input type="radio" name="farmType" value="large">
+                        <span class="checkmark" ></span></label>
+
                 </div>
             </div>
 
