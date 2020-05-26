@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2020 at 08:18 PM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.1.30
+-- Generation Time: May 26, 2020 at 03:52 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -42,7 +41,9 @@ CREATE TABLE `tb_login` (
 
 INSERT INTO `tb_login` (`loginId`, `loginUsername`, `loginPassword`, `userStatus`, `date`) VALUES
 (37, 'withan', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'member', '2020-05-24'),
-(39, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin', '2020-05-24');
+(39, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin', '2020-05-24'),
+(50, 'prompat', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'member', '2020-05-25'),
+(51, 'piyatat', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'member', '2020-05-25');
 
 -- --------------------------------------------------------
 
@@ -66,7 +67,9 @@ CREATE TABLE `tb_members` (
 --
 
 INSERT INTO `tb_members` (`memberId`, `loginId`, `memberFirstname`, `memberLastname`, `memberTel`, `memberAddress`, `memberProvince`, `memberPostCode`) VALUES
-(23, 37, 'วิธาน', 'วงษาบุตร', '0898182239', 'หอปิยากร', 'หนองคาย', '43000');
+(23, 37, 'วิธาน', 'วงษาบุตร', '0898182239', 'หอปิยากร', 'หนองคาย', '43000'),
+(29, 50, 'พรหมพัฒน์', 'ชาญโชคประเสริฐ', '0945171465', '8/4 ถนนชวนชื่น  ต.ในเมือง อ.เมือง', 'ขอนแก่น', '40000'),
+(30, 51, 'ปิยทัศน์', 'นวกิจวัฒนา', '0622812737', '300/11 ม.4 ซ.ต้นคูณ ต.หนองขอนกว้าง อ.เมือง ', 'อุดรธานี', '41000');
 
 -- --------------------------------------------------------
 
@@ -78,6 +81,7 @@ CREATE TABLE `tb_registers` (
   `registerId` int(4) NOT NULL,
   `loginId` int(4) NOT NULL,
   `farmName` varchar(125) NOT NULL,
+  `farmType` set('small','large') NOT NULL,
   `farmArea` varchar(100) NOT NULL,
   `farmHouseNo` varchar(100) NOT NULL,
   `farmVillageNo` varchar(100) NOT NULL,
@@ -97,8 +101,10 @@ CREATE TABLE `tb_registers` (
 -- Dumping data for table `tb_registers`
 --
 
-INSERT INTO `tb_registers` (`registerId`, `loginId`, `farmName`, `farmArea`, `farmHouseNo`, `farmVillageNo`, `farmVillage`, `farmAlley`, `farmRoad`, `farmPostNo`, `farmSubDistric`, `farmDistrict`, `farmProvince`, `lat`, `lng`, `date`) VALUES
-(69, 37, 'ปิยากร', '1-0-4', '813', '1', '', '', '', '43000', 'หนองกมเกาะ', 'เมือง', 'หนองคาย', '17.806055217223065', ' 102.72273510012513', '2020-05-24');
+INSERT INTO `tb_registers` (`registerId`, `loginId`, `farmName`, `farmType`, `farmArea`, `farmHouseNo`, `farmVillageNo`, `farmVillage`, `farmAlley`, `farmRoad`, `farmPostNo`, `farmSubDistric`, `farmDistrict`, `farmProvince`, `lat`, `lng`, `date`) VALUES
+(73, 50, 'ไร่ประหยัด', 'small', '2-0-0', '8/4', '', '', '', 'ชวนชื่น', '40000', 'ในเมือง', 'เมือง', 'ขอนแก่น', '16.43929481701079', ' 102.82860995417363', '2020-05-24'),
+(74, 51, 'ไร่วิเชียร', 'small', '5-2-20', '300/11', '4', 'ณัฐการ', 'ต้นคูณ', 'อุดร-สกล', '41000', 'หนองขอนกว้าง', 'เมือง', 'อุดรธานี', '17.346926395656904', ' 102.8904089469134', '2020-05-24'),
+(75, 51, 'ไร่ปิยทัศน์', 'small', '2-1-10', '144/9', '1', 'ณัฐการ', '10', 'อุดร-สกล', '41000', 'หนองขอนกว้าง', 'เมือง', 'อุดรธานี', '17.170295443232888', ' 103.13897651998109', '2020-05-24');
 
 --
 -- Indexes for dumped tables
@@ -130,19 +136,19 @@ ALTER TABLE `tb_registers`
 -- AUTO_INCREMENT for table `tb_login`
 --
 ALTER TABLE `tb_login`
-  MODIFY `loginId` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `loginId` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `tb_members`
 --
 ALTER TABLE `tb_members`
-  MODIFY `memberId` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `memberId` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `tb_registers`
 --
 ALTER TABLE `tb_registers`
-  MODIFY `registerId` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `registerId` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
