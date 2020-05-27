@@ -1,7 +1,6 @@
 <?php 
 session_start();
 require_once("database/connect.php");
-require_once("database/current_pk.php");
 $status=0;
 if($_POST){
     $inputUsername = $_POST['txtUsername'];
