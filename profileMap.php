@@ -59,7 +59,6 @@ $tel = $result['memberTel'];
       .container {
         background-color: white;
         border-radius: 8px;
-        box-shadow: 0 2px 7px 1px rgba(0,0,0,0.3);
         font-size: 13px;
         font-weight: 300;
         padding: 12px;

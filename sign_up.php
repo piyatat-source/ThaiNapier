@@ -20,12 +20,13 @@ if($_POST){
     $result_check_user = mysqli_fetch_array($query_check_user,MYSQLI_ASSOC);
 	if($result_check_user)
 	{
-        $status=1;
+        //$status=1;
+            header("Location: sign_up.php?status=alreadyuse");
     }else{
         
         if($inputPassword!=$inputrePassword)
         {
-            $status=2;
+            header("Location: sign_up.php?status=passnotmatch");
         }else{
             $sql_add_login = "INSERT INTO tb_login (loginUsername,loginPassword)
             VALUES ('".$inputUsername."',sha1($inputPassword)) ";
@@ -44,9 +45,9 @@ if($_POST){
             $query_add_members = mysqli_query($link,$sql_add_members) or die ("Error in query: $sql_add_members " . mysqli_error());
   
             if($query_add_login&&$query_add_members){
-                echo "<script type='text/javascript'>alert('สำเร็จ');window.location.replace('sign_in.php');</script>";
+                echo "<script type='text/javascript'>window.location.replace('sign_in.php?status=success');</script>";
             }else{
-                echo "<script type='text/javascript'>alert('เกิดข้อผิดพลาด กรุณาลองใหม่ภายหลัง');window.location.replace('sign_up.php');</script>";
+                echo "<script type='text/javascript'>window.location.replace('sign_up.php?status=fail');</script>";
             }
         }
     }
@@ -90,11 +91,7 @@ if($_POST){
                     <button type="button" class="switch reg" >ถัดไป</button>
                 </div>
                 
-                <p class="warning"><a>
-                 <?php 
-                if($_POST&&$status==1){echo "มีผู้ใช้ชื่อบัญชีนี้แล้ว กรุณาใช้ชื่ออื่น";}
-                else if($_POST&&$status==2){echo "***รหัสผ่านไม่ตรงกัน***";}
-                ?></a></p>
+                
                 <p class="message">มีบัญชีแล้ว <a href="sign_in.php">เข้าสู่ระบบ</a></p>
                 
             </div>
@@ -234,9 +231,7 @@ $('.second .switch').click(function(){
     $('div .first').animate({height: "toggle", opacity: "toggle"}, "slow");
 });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script type="text/javascript" src="js/sweet.js"></script>
-
 <script>
     $(document).ready(function() {
   $(window).keydown(function(event){
@@ -246,9 +241,62 @@ $('.second .switch').click(function(){
     }
   });
 });
-
-
 </script>
+<script>
+function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+</script>
+
+
+
+<script>
+        var status = getUrlParameter('status')
+        $(document).ready(function() {
+          if(status=="alreadyuse"){
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                title: "มีผู้ใช้งานบัญชีนี้แล้ว",
+                text: "กรุณาลองใหม่อีกครั้ง",
+                showConfirmButton: false,
+                timer: 3000,
+            });
+          }else if(status=="passnotmatch"){
+            Swal.fire({
+                position: "center",
+                icon: "warning",
+                title: "รหัสผ่านไม่ตรงกัน",
+                text: "กรุณาลองใหม่อีกครั้ง",
+                showConfirmButton: false,
+                timer: 3000,
+            });
+          }else if(status=="fail"){
+            Swal.fire({
+                position: "center",
+                icon: "warning",
+                title: "ผิดพลาด",
+                text: "กรุณาลองใหม่อีกครั้ง",
+                showConfirmButton: false,
+                timer: 3000,
+            });
+          }else{
+
+          }
+        });
+      </script>
+
 
 </body>
 </html>

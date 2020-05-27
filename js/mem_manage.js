@@ -1,7 +1,13 @@
 $(document).ready(function () {
-  $("#result").html(
-    '<tr><td colspan="6">กรอกชื่อหรือชื่อผู้ใช้เพื่อนค้นหา</td></tr>'
-  );
+  $("#result").html("");
+  $.ajax({
+    url: "fetch_all_table.php",
+    method: "post",
+    dataType: "text",
+    success: function (data) {
+      $("#result").html(data);
+    },
+  });
   $("#search_text").keyup(function () {
     var txt = $(this).val();
     if (txt != "") {
@@ -16,9 +22,16 @@ $(document).ready(function () {
         },
       });
     } else {
-      $("#result").html(
-        '<tr><td colspan="6">กรอกชื่อหรือชื่อผู้ใช้เพื่อค้นหา</td></tr>'
-      );
+      $("#result").html();
+      $.ajax({
+        url: "fetch_all_table.php",
+        method: "post",
+        data: { search: txt },
+        dataType: "text",
+        success: function (data) {
+          $("#result").html(data);
+        },
+      });
     }
   });
 });

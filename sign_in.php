@@ -12,7 +12,7 @@ if($_POST){
   $result = mysqli_fetch_array($query);
 	if(!$result)
 	{
-    $status=1;
+    header("Location: sign_in.php?status=wrong");
 	}
 	else
 	{
@@ -40,6 +40,7 @@ if($_POST){
     <link rel="stylesheet" href="css/webstyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/bb7f694074.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
 </head>
@@ -57,12 +58,7 @@ if($_POST){
       <input type="password" name="txtPassword" placeholder="รหัสผ่าน" required />
      
       <button type="submit" >เข้าสู่ระบบ</button>
-      <p class="warning"><a><?php 
-      
-      if($_POST&&$status==1)
-      echo "***รหัสผ่านผิด***";
-      
-      ?></a></p>
+     
       <p class="message">ยังไม่มีบัญชี? <a href="sign_up.php">ลงทะเบียน</a></p>
 
     
@@ -70,7 +66,50 @@ if($_POST){
   </div>
   
 </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script>
+function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
 
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+</script>
+
+<script>
+        var status = getUrlParameter('status')
+        $(document).ready(function() {
+          if(status=="success"){
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "สมัครสมาชิกสำเร็จ",
+                text: "กรุณาเข้าสู่ระบบ",
+                showConfirmButton: false,
+                timer: 3000,
+            });
+          }else if(status=="wrong"){
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                title: "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง",
+                text: "กรุณาลองใหม่อีกครั้ง",
+                showConfirmButton: false,
+                timer: 3000,
+            });
+          }else{
+
+          }
+        });
+      </script>
 
 
 </body>

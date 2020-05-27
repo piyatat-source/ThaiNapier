@@ -7,6 +7,17 @@ function Signout() {
     timer: 3000,
   });
 }
+
+function AlerdyUse() {
+  Swal.fire({
+    position: "center",
+    icon: "error",
+    title: "มีผู้ใช้งานบัญชีนี้แล้ว",
+    showConfirmButton: false,
+    timer: 3000,
+  });
+}
+
 function warningtoSignin() {
   Swal.fire({
     icon: "error",

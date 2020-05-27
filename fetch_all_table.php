@@ -3,8 +3,7 @@ include("database/connect.php"); //connect database
 
 $output = '';
 $counterb = 1; //counter b
-$searchword = $_POST['search'];
-$sql = "SELECT * FROM tb_login INNER JOIN tb_members ON tb_login.loginId = tb_members.loginId  WHERE (tb_login.loginUsername LIKE '%".$_POST['search']."%' OR tb_members.memberFirstname LIKE '%".$_POST['search']."%' OR tb_members.memberLastname LIKE '%".$_POST['search']."%' ) AND tb_login.userStatus = 'member'";
+$sql = "SELECT * FROM tb_login INNER JOIN tb_members ON tb_login.loginId = tb_members.loginId";
 $result = mysqli_query($link, $sql);
 
 // Display
@@ -29,15 +28,12 @@ if(mysqli_num_rows($result) > 0) {
                 <td>'.$row['date'].'</td>
                 <td>
                     <a href="mem_profile.php?lid='.$row['loginId'].'" class="button-view"><i class="fas fa-search"></i> ดูโปรไฟล์</a>
-                    <a onclick="confirmation(event)"  value="'.$row["loginUsername"].'" class="button-del" href="mem_del.php?lid='.$row['loginId'].'"><i class="far fa-trash-alt"></i> ลบ</a>
+                    <a onclick="confirmation(event)" value="'.$row["loginUsername"].'" class="button-del" href="mem_del.php?lid='.$row['loginId'].'"><i class="far fa-trash-alt"></i> ลบ</a>
                 </td>
             </tr>
         ';
      }
      echo $output;
-} 
-else {
-    echo '<tr><td colspan="6">ไม่พบ "'.$searchword.'"</td></tr>';
 }
 
 ?>
