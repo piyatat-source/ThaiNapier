@@ -46,10 +46,8 @@ tr:hover {
 } */
 
 th {
-  background: #478121;
-  border-bottom: 2px solid #cae496;
+  background: #55962b;
   color: #ffffff;
-  text-shadow: 1px 1px 1px #000000;
   height: 60px;
 }
 .card {

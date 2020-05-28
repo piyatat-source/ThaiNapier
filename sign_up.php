@@ -268,8 +268,8 @@ function getUrlParameter(sParam) {
             Swal.fire({
                 position: "center",
                 icon: "error",
-                title: "มีผู้ใช้งานบัญชีนี้แล้ว",
-                text: "กรุณาลองใหม่อีกครั้ง",
+                title: "มีชื่อผู้ใช้นี้ในระบบแล้ว",
+                text: "กรุณาเปลี่ยนและลองใหม่อีกครั้ง",
                 showConfirmButton: false,
                 timer: 3000,
             });
