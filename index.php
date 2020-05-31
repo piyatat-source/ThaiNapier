@@ -12,6 +12,7 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
     <link rel="icon" href="img/iconweb.ico" type="image/ico">
      
     <link rel="stylesheet" href="css/webstyle.css">
+    <link rel="stylesheet" href="css/scrollbars.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/bb7f694074.js"></script>
     <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -106,7 +107,7 @@ include("header.php");
 
           <div class="box-left">
             <div class="mini-img"><img src="img/e4.jpg" alt=""></div>
-            <div class="infomation">
+            <div class="infomation down">
               <div class="title">ผลและเมล็ด</div>
               <div class="detail">หญ้าเนเปียร์พบติดผลได้น้อยมาก เปลือกผล และเมล็ดมีลักษณะหุ้มติดกันหุ้มติดกัน
               </div> 
@@ -115,6 +116,14 @@ include("header.php");
           </div>
          </div>
 </section>
+
+<section class="bar-hist">
+    <div class="info-grass2">
+      <div class="title">เกษตรกรผู้ปลูกหญ้าเนเปียร์</div>
+      <div class="detail">ปัจจุบันมีเกษตรกรจำนวนมาก นิยมปลูกหญ้าเนเปียร์เพื่อใช้ทำเป็นอาหารสัตว์ โดยแผนที่ด้านล่างจะแสดงข้อมูลไร่ของเกษตรกรบ้างส่วน ที่ลงทะเบียนกับเรา</div>
+      <div class="mapall"><iframe src="all_map.php" width="100%" height="440" style="border:0"></iframe></div>
+    </div>
+  </section>
 
  <?php
 include("footer.php"); 

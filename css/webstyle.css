@@ -15,6 +15,27 @@ header {
   font-style: normal;
   z-index: 999;
 }
+::-webkit-scrollbar {
+  width: 15px;
+  border-radius:20px;
+}
+
+    /* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+    
+    /* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+    /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+}
 
 .hamburger-icon {
   /* position: absolute; */
@@ -25,6 +46,10 @@ header {
   margin-right: 15px;
   cursor: pointer;
   display: none;
+}
+
+.down{
+  padding-top: 15px;
 }
 
 .hamburger-icon span {
@@ -198,6 +223,11 @@ header {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.mapall{
+  margin-top: 15px;
+  width: 100%;
 }
 
 .form-reg
@@ -866,15 +896,18 @@ footer div {
     margin-right: 0px;
   }
   .box-left .mini-img {
-    text-align: center;
-    width: 100%;
+    /* text-align: center; */
+    /* width: 100%; */
   }
   .box-left .mini-img img {
-    width: 50%;
+    /* width: 50%; */
   }
   .box-left .infomation {
-    width: 100%;
+    /* width: 100%; */
     padding-left: 0px;
+  }
+  .down{
+    padding-top: 0px !important;
   }
   .info-grass3 .box-left {
     width: 90%;
@@ -914,4 +947,18 @@ footer div {
   .form-reg {
     width: 90%;
   }
+}
+
+@media (max-width: 480px){
+.box-left .mini-img {
+  text-align: center; 
+  width: 100%; 
+}
+.box-left .mini-img img {
+  width: 50%;
+}
+.box-left .infomation {
+  width: 100%;
+  padding-left: 0px;
+}
 }

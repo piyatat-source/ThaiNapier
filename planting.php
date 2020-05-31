@@ -13,21 +13,71 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
 
     <link rel="stylesheet" href="css/webstyle.css">
     <link rel="stylesheet" href="css/webstyle2.css">
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/bb7f694074.js"></script>
     <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript">
         var sessionNum = '<?php echo $session_value;?>';
     </script>
+<style>
 
+.container-ontop {
+    max-width: 85%;
+    margin: 0 auto;
+    /* background: salmon; */
+}
+
+.info-ontop {
+    /* float: right; */
+    display: inline;
+    padding-left: 30px;
+    float: left;
+    margin: 0 auto;
+    width: 100%;
+    /* background: yellow; */
+}
+.info-ontop .title {
+  text-align:center;
+    font-weight: 900;
+    font-size: 24px;
+    color: #1b1b1b;
+    /* background: red; */
+}
+.info-ontop .detail {
+    text-align:left;
+    margin-top: 15px;
+    color: #656565;
+    /* background: white; */
+}
+@media (max-width: 968px){
+  .info-ontop .title {
+  text-align:left;
+
+}
+.container-ontop div {
+    float: none;
+}
+}
+</style>
 </head>
 <body>
 <?php
 include("header.php"); 
 ?>
 <a href="javascript:" id="return-to-top" onclick="topFunction()" style="display: none;" ><i class="fas fa-chevron-up" ></i></a>
-  <section class="content"><br></section>
+  <section class="content"><br>
+    <div class="container-ontop ">
+    
+    <div class="info-ontop" >
+    <div class="title">หญ้าเนเปียร์ปากช่อง 1</div>
+    <div class="detail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    หญ้าเนเปียร์ปากช่อง 1 เป็นหญ้าเนเปียร์ลูกผสมสายพันธุ์หนึ่ง ซึ่งเกิดจากการผสมข้ามระหว่างหญ้าเนเปียร์ยักษ์และหญ้าไข่มุก
+    โดยที่หญ้าเนเปียร์ปากช่อง 1 นั้น ใบมีขนน้อย ไม่คันเมื่อสัมผัส ไม่มีโรคและแมลงรบกวน ให้ผลผลิตต่อไร่สูง
+ให้ผลผลิตตลอดทั้งปีมีปริมาณน้ำตาลในใบและลำต้นสูง ปลูกครั้งเดียวเก็บเกี่ยวต่อเนื่องได้นาน 8-9 ปี</div>
+    </div>
+    </div>
+  </section>
   <section class="content2">
     <div class="container">
     <div class="info-grass1" >
@@ -130,21 +180,32 @@ include("header.php");
         <div class="title2">การปลูก</div><br>
             <div class="detail2">ทําได้โดยใช้แรงงานคน หรือปลูกด้วยเครื่องปลูก<br>– สำหรับการปลูกพื้นที่ขนาดเล็กและใช้แรงงานคน<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             ภายหลังจากที่เตรียมดินเสร็จ เพื่อป้องกันการสูญเสียความชื้นจากดินควรปลูกทันที ต้นพันธุ์ที่เตรียมไว้ให้ตัดเป็นท่อนๆ ให้มีข้อติดอยู่ท่อนละ 2 ข้อ นําไปปลูกโดยใช้ระยะปลูกระหว่างแถว 120 เซนติเมตร ระหว่างต้น 80 เซนติเมตร ปลูกหลุมละ 2 ท่อนปักไขว้ท่อนพันธุ์เอียง 30 องศา ให้ 1 ข้อจมอยู่ในดินประมาณ 1-2 นิ้ว
-            </div>
-            <div class="detail2">– การยกร่องปลูกหรือปลูกแบบอ้อย<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br>– การยกร่องปลูกหรือปลูกแบบอ้อย<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             เป็นวิธีการปลูกอีกวิธีหนึ่งที่ช่วยการปฏิบัติงานสะดวกมากขึ้น ทั้งในการปลูกการให้น้ำ และการระบายน้ำ ซึ่งจะช่วยให้รากสามารถหยั่งลึกลงไปในดินได้ดี
+            การยกร่องควรวางแนวร่อง ขวางแนวลาดเอียงของพื้นที่ เพื่อลดการพัดพาของดินเนื่องจากน้ำและทําให้น้ำซึมลงดินได้ดีขึ้น การปลูกปลายฝนต้องไถให้ลึกและยกร่องให้สูง
+            </div>
+            <!-- <div class="detail2">– การยกร่องปลูกหรือปลูกแบบอ้อย<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            เป็นวิธีการปลูกอีกวิธีหนึ่งที่ช่วยการปฏิบัติงานสะดวกมากขึ้น ทั้งในการปลูกการให้น้ำ และการระบายน้ำ ซึ่งจะช่วยให้รากสามารถหยั่งลึกลงไปในดินได้ดี
+            </div> -->
+          </div>
+        <!-- <div class="img-show" > <img src="img/planting5.jpg" alt="" > </div> -->
+        <div class="info-grass1" >
+        <div class="title2"></div>
+          <div class="detail2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             ภายหลังจากการยกร่องเสร็จควรปลูกทันที อย่าเปิดร่องไว้นานเพื่อป้องกันการสูญเสียความชื้นจากดิน การปลูกลึกจะช่วยให้ทนแล้งได้ดี ผลผลิตสูงและไว้ตอ ได้นานกว่าการปลูกตื้น การปลูกโดยการยกร่องปลูก ระยะร่องห่างกันประมาณ 85 เซนติเมตร นําต้นพันธุ์ทั้งลำวางลงในร่องลำต่อลำ แล้วใช้มีดสับให้ลำต้นขาดออกจากกัน ภายหลังจากวางต้นพันธุ์เรียบร้อยแล้ว ควรกลบดินให้มีความหนาพอประมาณ ถ้าปลูกข้ามแล้งจะต้องกลบดินให้หนากว่าการปลูกต้นฝน
             </div>
           </div>
-        <div class="img-show" > <img src="img/planting5.jpg" alt="" > </div>
         
       </div>
     </div>
     <div class="container">
-          <div class="info-grass1" >
+          <!-- <div class="info-grass1" >
           <div class="detail2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             การยกร่องควรวางแนวร่อง ขวางแนวลาดเอียงของพื้นที่ เพื่อลดการพัดพาของดินเนื่องจากน้ำและทําให้น้ำซึมลงดินได้ดีขึ้น การปลูกปลายฝนต้องไถให้ลึกและยกร่องให้สูง ภายหลังจากการยกร่องเสร็จควรปลูกทันที อย่าเปิดร่องไว้นานเพื่อป้องกันการสูญเสียความชื้นจากดิน การปลูกลึกจะช่วยให้ทนแล้งได้ดี ผลผลิตสูงและไว้ตอ ได้นานกว่าการปลูกตื้น การปลูกโดยการยกร่องปลูก ระยะร่องห่างกันประมาณ 85 เซนติเมตร นําต้นพันธุ์ทั้งลำวางลงในร่องลำต่อลำ แล้วใช้มีดสับให้ลำต้นขาดออกจากกัน ภายหลังจากวางต้นพันธุ์เรียบร้อยแล้ว ควรกลบดินให้มีความหนาพอประมาณ ถ้าปลูกข้ามแล้งจะต้องกลบดินให้หนากว่าการปลูกต้นฝน
             </div>
-          </div>
+          </div> -->
+          
           <div class="info-grass1" >
             <div class="detail2">- การปลูกในพื้นที่ขนาดใหญ่อาจปลูกโดยใช้เครื่องปลูก<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             ซึ่งสามารถปลูกได้รวดเร็วและสม่ำเสมอ เครื่องปลูกสามารถทํางานได้หลายอย่างคือเริ่มตั้งแต่เป็ดร่อง ตัดต้นพันธุ์ทั้งลำออกเป็นท่อน วางท่อนพันธุ์ ใส่ปุ๋ยและกลบในเวลา 1 ชั่วโมงสามารถปลูกได้ประมาณ 3-4 ไร่ การปลูกอาจมีวิธีการปลูก ระยะปลูก และอัตราปลูกแตกต่างกันไป ขึ้นอยู่กับความพร้อมของเกษตรกร สภาพแวดล้อม พื้นที่ปลูก และความสะดวกในการใช้เครื่องมือปลูก ช่วงแรกของการปลูก ท่อนพันธุ์ต้องการน้ำมาก ควรรดน้ำให้ชุ่มทุกวัน จะทําให้อัตรางอกดี แต่อย่าให้น้ำท่วมขังแปลงปลูก จะทําให้ท่อนพันธุ์เน่าและตายได้

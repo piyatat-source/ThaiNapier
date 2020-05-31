@@ -22,7 +22,8 @@
       * {
         font-family: ibm-plex-thai, sans-serif;
       }  
-
+      /* width */
+     
       .map {
         height: 100%;
       }
@@ -120,8 +121,9 @@
     }
     function LoadMap() {
         var mapOptions = {
-            center: new google.maps.LatLng(13.736717, 100.523186),
-            zoom: 7,
+            center: new google.maps.LatLng(16.422995000000032, 102.842031),
+            zoom: 8,
+            controlSize: 24,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
