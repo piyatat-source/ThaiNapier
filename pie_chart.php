@@ -33,10 +33,16 @@
     box-sizing: border-box;
     font-family: ibm-plex-thai, sans-serif;
 }
+.contain{
+    width :100%
+}
 </style>
 </head>
 <body onload="load()">
-<canvas id="myChart" width="400" height="400"></canvas>
+<div class="contain">
+<canvas id="myChart" width="100%" height="100%"></canvas>
+</div>
+
 <script src="modules/chartjs/dist/Chart.js"></script>
 <script>
 function load(){

@@ -12,7 +12,6 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
     <link rel="icon" href="img/iconweb.ico" type="image/ico">
      
     <link rel="stylesheet" href="css/webstyle.css">
-    <link rel="stylesheet" href="css/scrollbars.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/bb7f694074.js"></script>
     <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
