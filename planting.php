@@ -27,6 +27,15 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
     margin: 0 auto;
     /* background: salmon; */
 }
+.title-head {
+
+    padding:10px;
+    background: #57982c;
+}
+.title-head .title{
+    color:white;
+}
+
 
 .info-ontop {
     /* float: right; */
@@ -53,8 +62,12 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
 @media (max-width: 968px){
   .info-ontop .title {
   text-align:left;
-
 }
+
+.title-head .title{
+  text-align:center;
+}
+
 .container-ontop div {
     float: none;
 }
@@ -66,31 +79,24 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
 include("header.php"); 
 ?>
 <a href="javascript:" id="return-to-top" onclick="topFunction()" style="display: none;" ><i class="fas fa-chevron-up" ></i></a>
-  <section class="content"><br>
-    <div class="container-ontop ">
-    
-    <div class="info-ontop" >
-    <div class="title">หญ้าเนเปียร์ปากช่อง 1</div>
-    <div class="detail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    หญ้าเนเปียร์ปากช่อง 1 เป็นหญ้าเนเปียร์ลูกผสมสายพันธุ์หนึ่ง ซึ่งเกิดจากการผสมข้ามระหว่างหญ้าเนเปียร์ยักษ์และหญ้าไข่มุก
-    โดยที่หญ้าเนเปียร์ปากช่อง 1 นั้น ใบมีขนน้อย ไม่คันเมื่อสัมผัส ไม่มีโรคและแมลงรบกวน ให้ผลผลิตต่อไร่สูง
-ให้ผลผลิตตลอดทั้งปีมีปริมาณน้ำตาลในใบและลำต้นสูง ปลูกครั้งเดียวเก็บเกี่ยวต่อเนื่องได้นาน 8-9 ปี</div>
-    </div>
-    </div>
-  </section>
-  <section class="content2">
+ <br>
+  <section class="content">
     <div class="container">
     <div class="info-grass1" >
-    <div class="title">พื้นที่ปลูกที่เหมาะสม</div>
+    <div class="title-head">
+    <div class="title" style="font-weight:600">หญ้าเนเปียร์ปากช่อง 1</div>
+    </div>
+    <div class="detail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ในส่วนของหน้านี้จะเป็นการอธิบายการปลูกหญ้าเนเปียร์ปากช่อง 1 หญ้าเนเปียร์ปากช่อง 1 เป็นหญ้าเนเปียร์ลูกผสมสายพันธุ์หนึ่ง ซึ่งเกิดจากการผสมข้ามระหว่างหญ้าเนเปียร์ยักษ์และหญ้าไข่มุก
+    โดยที่หญ้าเนเปียร์ปากช่อง 1 นั้น ใบมีขนน้อย ไม่คันเมื่อสัมผัส ไม่มีโรคและแมลงรบกวน ให้ผลผลิตต่อไร่สูง
+ให้ผลผลิตตลอดทั้งปีมีปริมาณน้ำตาลในใบและลำต้นสูง ปลูกครั้งเดียวเก็บเกี่ยวต่อเนื่องได้นาน 8-9 ปี</div>
+    <!-- </div> -->
+    
+    <div class="title"><br>พื้นที่ปลูกที่เหมาะสม</div>
            <div class="detail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            ปลูกได้ทั่วทุกภาคของประเทศไทย เจริญเติบโตได้ดีในดินหลายประเภท ไม่ว่าจะเป็นดินร่วนปนทราย ดินเหนียว หรือดินลูกรัง ชอบดินที่มีการระบายน้ำดีและมีความอุดมสมบูรณ์ ทนแล้ง แต่ไม่ทนน้ำท่วมขัง ต้องการน้ำฝน ประมาณ 1,000 มิลลิเมตร/ปีเมื่อเปรียบเทียบกับอ้อยที่ต้องการน้ำฝน 1,200-1,500 มิลลิเมตร/ปี
           </div>
-          <div class="detail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          กล่าวได้ว่าในพื้นที่แห้งแล้งที่ปลูกอ้อยได้ก็สามารถปลูกหญ้าเนเปียร์สายพันธุ์นี้ได้สำหรับพื้นที่ลุ่มหรือที่นาที่น้ำอาจจะท่วมขังให้ยกร่องเพื่อระบายน้ำก็จะสามารถปลูกได้เช่นกัน
-          </div>
-          <div class="detail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          หญ้าเนเปียร์สายพันธุ์นี้ต้องการแสงแดดเพื่อใช้ในการเจริญเติบโตพบว่าการปลูกใกล้ร่มเงาหรือที่ร่มในสวนผลไม้จะให้ผลผลิตไม่มาก จึงควรปลูกในบริเวณพื้นที่ที่มีแสงแดดส่องถึงอย่างเพียงพอ
-          </div>
+          
       </div>
       <div class="img-show" > <img src="img/planting1.jpg" alt="" > </div>
     </div>
