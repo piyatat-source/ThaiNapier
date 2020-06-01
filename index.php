@@ -121,7 +121,7 @@ include("header.php");
     <div class="info-grass2">
       <div class="title">เกษตรกรผู้ปลูกหญ้าเนเปียร์</div>
       <div class="detail">ปัจจุบันมีเกษตรกรจำนวนมาก นิยมปลูกหญ้าเนเปียร์เพื่อใช้ทำเป็นอาหารสัตว์ โดยแผนที่ด้านล่างจะแสดงข้อมูลไร่ของเกษตรกรบ้างส่วน ที่ลงทะเบียนกับเรา</div>
-      <div class="mapall"><iframe src="all_map.php" width="100%" height="440" style="border:0"></iframe></div>
+      <div class="mapall"><iframe src="all_map.php" width="100%" height="540" style="border:0"></iframe></div>
     </div>
   </section>
 
