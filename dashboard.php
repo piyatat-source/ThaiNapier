@@ -57,6 +57,7 @@ while($row = mysqli_fetch_assoc($query)){
     
     <link rel="stylesheet" href="css/webstyle.css">
     <link rel="stylesheet" href="css/dash.css">
+    <link rel="stylesheet" type="text/css" href="modules/chartjs/dist/Chart.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/bb7f694074.js"></script>
     <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -148,7 +149,10 @@ include("header.php");
         <div class="content-statistic">
           <div class="title-dash">ข้อมูลประเภทเกษตรกร</div>
           <div class="pie-show">
-          <iframe src="pie_chart.php" width="95%" height="350" style="border:0"></iframe>
+            <div class="pie-centent">
+              <iframe src="pie_chart.php" id="chart" width="95%" height="350" style="border:0" scrolling="no"></iframe>
+            </div>
+          
           </div>
         </div>
       </div>
@@ -178,5 +182,7 @@ include("footer.php");
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="js/event.js"></script> 
+<script src="modules/chartjs/dist/Chart.js"></script>
+
 </body>
 </html>
