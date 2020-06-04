@@ -40,6 +40,7 @@ session_start();
                           <li><a href="dashboard.php" >สถิติข้อมูลการเกษตร</a></li>
               <?php }else{ ?>
                           <li><a href="#" id="btn-reg">ลงทะเบียนเกษตรกร</a></li>
+                          <li><a href="../research.php" >ลงทะเบียนเกษตรกร</a></li>
              <?php } ?> 
             </ul>
             
