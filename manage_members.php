@@ -1,4 +1,8 @@
-
+<?php 
+session_start();
+error_reporting(0);
+$session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +14,99 @@
     <link rel="stylesheet" href="css/tablestyle2.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/bb7f694074.js"></script>
+    <script type="text/javascript">var sessionNum = '<?php echo $session_value;?>';</script>
     
 
 </head>
 <body>
 <?php
-include("header.php"); 
+//include("header.php"); 
 ?>
+
+<header>
+        <nav>
+       
+        <div class="header"></div>
+
+          <!-- <input type="checkbox" id="check">
+              <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+              </label>   -->
+              <input type="checkbox" id="openmenu" class="hamburger-checkbox">
+              <div class="hamburger-icon checkbtn">
+                <label for="openmenu" id="hamburger-label">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </label>    
+              </div>
+
+
+              <input type="checkbox" id="check2">
+              <label for="check2" class="checkbtn2">
+                <i class="fas fa-user-circle"></i>
+              </label>  
+          
+
+      
+            <img src="img/logo_napier3.png" alt="logo" ></img>
+            <ul class="all-mainmenu">
+              <li><a href="index.php">ข้อมูลหญ้าเนเปียร์</a></li>
+              <li><a href="planting.php">การเพาะปลูก</a></li>
+              <li><a href="research.php">การทดลอง</a></li>
+              <?php if($_SESSION['Level']=="admin"){ ?>
+                          <li><a href="dashboard.php" >สถิติข้อมูลการเกษตร</a></li>
+              <?php }else{ ?>
+                          <li><a href="#" id="btn-reg">ลงทะเบียนเกษตรกร</a></li>      
+             <?php } ?> 
+             <li><a href="../../" >เว็บไซต์หลัก</a></li>
+            </ul>
+            
+            <div id="user-control" class="user-control">
+              <ul class="user-menu">
+                <!-- ยังไม่ล็อกอิน --> 
+                <?php 
+                if($_SESSION['Level']==""){
+                ?>          
+                <li><a href="sign_in.php"><i class="fas fa-edit"></i> ลงชื่อเข้าใช้</a></li>
+                <li><a href="sign_up.php"><i class="fas fa-user-plus"></i> สมัครสมาชิก</a></li>
+                <?php
+                }
+                else if($_SESSION['Level']=="admin"){ ?>
+
+                  <li><a href="#"><i class="fas fa-user"></i> ชื่อผู้ใช้ : <?php echo $_SESSION['Username']; ?></a></li>
+                  <li><a href="#"> </a></li> 
+                  <li><a href="manage_members.php">จัดการสมาชิก</a></li>
+                  <input type="hidden" id="btn-reg"> <!-- JS ERROR -->
+                  <?php
+                }
+                else if($_SESSION['Level']=="member"){ ?>
+
+                  <li><a href="#"><i class="fas fa-user"></i> ชื่อผู้ใช้ : <?php echo $_SESSION['Username']; ?></a></li>
+                  <li><a href="#"> </a></li> 
+                  <li><a href="farmlist.php">รายการลงทะเบียน</a></li>
+                  <?php
+                }
+                ?>
+                <?php 
+                if($_SESSION['Level']!=""){
+                ?>   
+                <li><a href="#" id="btn-signout" onclick="signout()">ออกจากระบบ</a></li>
+                <?php } ?>
+                
+                
+       
+                <!-- ล็อกอินแล้ว -->
+               
+
+              </ul>
+            </div>
+        </nav>
+        
+  </header>
+
+
 <a href="javascript:" id="return-to-top" onclick="topFunction()" style="display: none;" ><i class="fas fa-chevron-up" ></i></a>
 
 <section class="content bg-gray"><br>

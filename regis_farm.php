@@ -99,9 +99,9 @@ if($_POST){
               <?php if($_SESSION['Level']=="admin"){ ?>
                           <li><a href="dashboard.php" >สถิติข้อมูลการเกษตร</a></li>
               <?php }else{ ?>
-                          <li><a href="#" id="btn-reg" class="active" >ลงทะเบียนเกษตรกร</a></li>
-                          <li><a href="../../" >เว็บไซต์หลัก</a></li>
+                          <li><a href="#" id="btn-reg" class="active" >ลงทะเบียนเกษตรกร</a></li>    
              <?php } ?> 
+             <li><a href="../../" >เว็บไซต์หลัก</a></li>
             </ul>
             
             <div id="user-control" class="user-control">

@@ -64,9 +64,9 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
               <?php if($_SESSION['Level']=="admin"){ ?>
                           <li><a href="dashboard.php" >สถิติข้อมูลการเกษตร</a></li>
               <?php }else{ ?>
-                          <li><a href="#" id="btn-reg">ลงทะเบียนเกษตรกร</a></li>
-                          <li><a href="../../" >เว็บไซต์หลัก</a></li>
+                          <li><a href="#" id="btn-reg">ลงทะเบียนเกษตรกร</a></li>        
              <?php } ?> 
+             <li><a href="../../" >เว็บไซต์หลัก</a></li>
             </ul>
             
             <div id="user-control" class="user-control">
