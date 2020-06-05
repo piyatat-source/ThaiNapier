@@ -16,12 +16,7 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
     <script src="https://kit.fontawesome.com/bb7f694074.js"></script>
     <script src= "https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript">var sessionNum = '<?php echo $session_value;?>';</script>
-    <style>
-  
 
-
-
-    </style>
 </head>
 <body>
 <?php
@@ -204,53 +199,9 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
 </section>
 
 <section class="bar-hist">
-    <div class="info-card ">
-      <div class="title">พันธุ์หญ้าเนเปียร์</div><br>
-      <div class="row">
-  <div class="column-card" >
-  <div class="card-napier">
-  <div class="img-cardnapier"><img src="img/napier03.jpg" alt="Avatar" ></div>
-  <div class="container-napier">
-    <h4><b>หญ้าเนเปียร์ยักษ์</b></h4> 
-    <p>ชื่อสามัญ : King grass<br>
-ชื่อวิทยาศาสตร์ : P. purpureum King grass<br>
-ต้นประเทศที่นำเข้า : ประเทศอินโดนีเซีย<br>
-ลักษณะเด่นชัด : ลำต้นสูง แตกกอง่าย ให้ผลผลิตต่อไร่สูง 10-60 ตัน/ไร่/ปีหรือมากกว่า</p> 
-  </div>
-</div>
-  </div>
-  <div class="column-card" >
-  <div class="card-napier">
-  <div class="img-cardnapier"><img src="img/napier02.jpg" alt="Avatar" ></div>
-  <div class="container-napier">
-    <h4><b>หญ้าเนเปียร์แคระ</b></h4> 
-    <p>ชื่อสามัญ : Mott Dwarf Elephant Grass<br>
-ชื่อวิทยาศาสตร์: P. purpureum cv. Mott<br>
-ต้นประเทศที่นำเข้า : มหาวิทยาลัยแห่งรัฐฟลอริดา<br>
-ลักษณะเด่นชัด : ลำต้นเตี้ย แตกกอง่าย เป็นพุ่ม ใบ และลำต้นมีขน</p> 
-  </div>
-</div>
-  </div>
-  <div class="column-card" >
-    <div class="card-napier">
-    <div class="img-cardnapier"><img src="img/napier01.jpg" alt="Avatar"></div>
-  <div class="container-napier">
-  <h4><b>หญ้าเนเปียร์ปากช่อง1 (พันธุ์ลูกผสม)</b></h4> 
-    <p>ชื่อสามัญ : Pak Chong 1<br>
-ชื่อวิทยาศาสตร์: P. purpureum x pennisetum americanum<br>
-ลักษณะเด่นชัด : ลำต้นสูงใหญ่ ลดการคันขณะเก็บเกี่ยว ให้ผลผลิตเหมือนกับหญ้าเนปียร์ยัก</p> 
-  </div>
-</div>
-  </div>
-</div>
-      
-    </div>
-  </section>
-
-  <section class="bar-hist bg-fff">
     <div class="info-grass2">
       <div class="title">เกษตรกรผู้ปลูกหญ้าเนเปียร์</div>
-      <div class="detail text-dark">ปัจจุบันเกษตรกรนิยมปลูกหญ้าเนเปียร์ใช้ทำแปรรูปเป็นอาหารสัตว์ โดยแผนที่ด้านล่างจะแสดงข้อมูลไร่ของเกษตรกรบ้างส่วน ที่ลงทะเบียนกับระบบของเรา</div>
+      <div class="detail">ปัจจุบันมีเกษตรกรจำนวนมาก นิยมปลูกหญ้าเนเปียร์เพื่อใช้ทำเป็นอาหารสัตว์ โดยแผนที่ด้านล่างจะแสดงข้อมูลไร่ของเกษตรกรบ้างส่วน ที่ลงทะเบียนกับเรา</div>
       <div class="mapall"><iframe src="all_map.php" width="100%" height="540" style="border:0"></iframe></div>
     </div>
   </section>

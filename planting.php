@@ -28,7 +28,7 @@ $session_value=(isset($_SESSION['Id']))?$_SESSION['Id']:'';
     /* background: salmon; */
 }
 .title-head {
-
+    border-radius:15px;
     padding:10px;
     background: #57982c;
 }
