@@ -1,5 +1,0 @@
-# thaiNapier
-[ThaiNapier Project โปรเจคฝึกงาน]
-
-
-
